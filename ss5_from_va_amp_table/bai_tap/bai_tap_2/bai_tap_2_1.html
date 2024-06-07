@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="bai_tap_2_1.css">
 </head>
 <body>
-<h1>Sở Thích Của Bạn</h1>
+<div>
+<h1 class="hover">Sở Thích Của Bạn</h1>
 <form>
-<p>Họ và tên <input name="yourname" type="text"><br><br>
-  Email <input name="email" type="text>"><br><br>
-  Sở Thích<br><br>
-  <input name="hobby" type="checkbox" value="tt">Thể Thao <input name="hobby" type="checkbox" value="an">Âm Nhạc <input name="hobby" type="Checkbox" value="ds">Đọc Sách<br><br>
-  <input name="hobby" type="checkbox" value="Cg">Chơi Game <input name="Hobby" type="checkbox" value="da">Điện Ảnh</p>
-  <input type="submit" value="Gửi Thông Tin">
-  <input type="reset" value="Đặt Lại">
+    <p>Họ và tên <input name="yourname" type="text"></p>
+  <p style="margin-left: 75px">Email <input name="email" type="text>"></p>
+    <table>
+        <tr>
+            <td class="d">Sở Thích</td>
+        <td><input name="hobby" type="checkbox" value="tt">Thể Thao</td>
+        <td><input name="hobby" type="checkbox" value="an">Âm Nhạc</td>
+        <td><input name="hobby" type="Checkbox" value="ds">Đọc Sách</td>
+        </tr>
+        <tr>
+            <td></td>
+        <td><input name="hobby" type="checkbox" value="Cg">Chơi Game</td>
+        <td><input name="Hobby" type="checkbox" value="da">Điện Ảnh</td>
+        <td><input name="Hobby" type="checkbox" value="lw">Lướt Web</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input name="Hobby" type="checkbox" value="dl">Du Lịch</td>
+        </tr>
+    </table>
+  <p style="margin-left: 116px"><input type="submit" value="Gửi Thông Tin">
+  <input type="reset" value="Nhập Lại"></p>
 </form>
+</div>
 </body>
 </html>

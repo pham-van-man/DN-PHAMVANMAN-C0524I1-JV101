@@ -1,0 +1,30 @@
+.hover {
+    background: red;
+}
+h1{
+    text-align: center;  color: white;
+}
+p{
+    margin-left: 50px;
+}
+body{
+    background: aqua;
+}
+div{
+    background: snow;
+}
+tr{
+    border-collapse: collapse 1px;
+}
+table{
+    margin-left: 49px;
+}
+p{
+    color: darkblue;
+}
+td{
+    color: red;
+}
+.d{
+    color: darkblue;
+}

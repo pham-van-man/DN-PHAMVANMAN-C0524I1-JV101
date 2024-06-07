@@ -1,0 +1,26 @@
+table{
+    border-collapse: collapse;
+}
+td{
+    width: 500px;
+    text-align: center;
+}
+th{
+    width: 500px;
+}
+.th1{
+    background: #ffb300;
+}
+.th2{
+    background: #fefb00;
+}
+h1{
+    text-align: center;
+    color: darkblue;
+}
+p{
+    color: darkblue;
+}
+.p1{
+    text-align: right;
+  }

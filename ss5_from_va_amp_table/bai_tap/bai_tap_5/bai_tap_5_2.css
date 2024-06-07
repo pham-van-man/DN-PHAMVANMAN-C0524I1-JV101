@@ -1,0 +1,28 @@
+table{
+    border-collapse: collapse;
+}
+h1{
+    text-align: center;
+    color: darkblue;
+}
+.th{
+    background: red;
+}
+th{
+    width: 500px;
+}
+.th1{
+    background: #ffb300;
+}
+.p{
+    color: #e6e6e6;
+}
+.p1{
+    color: darkblue;
+}
+.p2{
+    color: red;
+}
+.p3{
+    color: black;
+}
