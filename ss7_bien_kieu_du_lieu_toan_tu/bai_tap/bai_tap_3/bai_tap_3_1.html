@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>may tính</h1>
+<input type="number" id="so1">
+<input type="number" id="so2">
+<input type="button" id="cong" value="cộng" onclick="t()">
+<input type="button" id="tru" value="trừ" onclick="t1()">
+<input type="button" id="nhan" value="nhân" onclick="t2()">
+<input type="button" id="chia" value="chia" onclick="t3()">
+<p id="kq"></p>
+<script>
+    function t(){
+        let a = +document.getElementById('so1').value
+        let b= +document.getElementById('so2').value
+        let c = a +b
+        document.getElementById('kq').innerHTML=c
+    }function t1(){
+        let a = +document.getElementById('so1').value
+        let b= +document.getElementById('so2').value
+        let c = a -b
+        document.getElementById('kq').innerHTML=c
+    }
+    function t2(){
+        let a = +document.getElementById('so1').value
+        let b= +document.getElementById('so2').value
+        let c = a *b
+        document.getElementById('kq').innerHTML=c
+    }function t3(){
+        let a = +document.getElementById('so1').value
+        let b= +document.getElementById('so2').value
+        let c = a /b
+        document.getElementById('kq').innerHTML=c
+    }
+</script>
+</body>
+</html>

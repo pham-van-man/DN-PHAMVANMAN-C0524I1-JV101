@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="c" placeholder="độ c">
+<button onclick="cd()">chuyển</button>
+<p id="k"></p>
+<script>
+    function cd(){
+        let c = +document.getElementById("c").value;
+        let f = ((c/5)*9)+32;
+        document.getElementById("k").innerHTML='độ f là '+f;
+    }
+</script>
+</body>
+</html>

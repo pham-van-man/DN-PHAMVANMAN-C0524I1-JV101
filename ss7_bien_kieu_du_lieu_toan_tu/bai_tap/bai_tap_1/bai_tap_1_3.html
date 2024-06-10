@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="bán kính" id="r">
+<button onclick="s()">điện tích</button>
+<p id="k"></p>
+<script>
+    function s(){
+        let a = +document.getElementById('r').value
+        let b = 3.14* (a*a)
+        document.getElementById('k').innerHTML='diện tích hình tròn là ' + b
+    }
+</script>
+</body>
+</html>

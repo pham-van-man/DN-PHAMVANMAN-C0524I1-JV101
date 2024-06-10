@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="r" placeholder="bán lính là">
+<button onclick="cv()">Tính Chu Vi</button>
+<p id="k"></p>
+<script>
+    function cv(){
+        let a=+document.getElementById('r').value
+        let b=3.14*(a*2)
+        document.getElementById('k').innerHTML='chu vi hình tròn là ' + b
+    }
+</script>
+</body>
+</html>

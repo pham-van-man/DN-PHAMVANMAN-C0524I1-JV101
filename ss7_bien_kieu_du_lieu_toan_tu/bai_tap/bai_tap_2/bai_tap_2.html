@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bai_tap_2.css">
+</head>
+<body>
+<table>
+<tr>
+    <th>số tiền</th>
+    <th>từ đồng</th>
+    <th>sang đồng</th>
+</tr>
+        <tr>
+            <td><input type="number" id="a"></td>
+            <td><select id="a1">
+                <option value="v">VND</option>
+                <option value="u">USD</option>
+            </select>
+            </td>
+            <td><select id="a2">
+                <option value="v1">VND</option>
+                <option value="u1">USD</option>
+            </select></td>
+        </tr>
+    </table>
+    <p id="k"></p>
+    <button onclick="c()">chuyển</button>
+<script>
+    function c() {
+        let b = +document.getElementById('a').value
+        let b1 = document.getElementById('a1').value
+        let b2 = document.getElementById('a2').value
+        let b3
+        if (b1 == 'v' && b2 == 'v1') {
+            b3 = b
+        } else if (b1 == 'v' && b2 == 'u1') {
+            b3 = b / 23000
+        } else if (b1 == 'u' && b2 == 'v1') {
+            b3 = b * 23000
+        } else {
+            b3 = b
+        }
+        document.getElementById('k').innerHTML='' + b3
+    }
+
+</script>
+</body>
+</html>
