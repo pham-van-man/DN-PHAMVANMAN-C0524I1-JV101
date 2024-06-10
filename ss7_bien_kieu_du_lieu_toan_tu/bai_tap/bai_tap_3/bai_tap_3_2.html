@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="bai_tap_3_2.css">
 </head>
 <body>
-<table>
+<form>
+<table border="1">
     <tr>
-        <td colspan="7"></td>
+        <td colspan="4"><input type="text" id="a"></td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><button type="button" id="b1" value="(" onclick="g(this.id)">(</button></td>
+        <td><button type="button" id="b2" value=")" onclick="g(this.id)">)</button></td>
+        <td><button type="button" id="b3" value="%" onclick="g(this.id)">%</button></td>
+        <td><input type="reset" value="AC"></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="b5" value="7" onclick="g(this.id)">7</button></td>
+        <td><button type="button" id="b6" value="8" onclick="g(this.id)">8</button></td>
+        <td><button type="button" id="b7" value="9" onclick="g(this.id)">9</button></td>
+        <td><button type="button" id="b8" value="/" onclick="g(this.id)">/</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="b9" value="4" onclick="g(this.id)">4</button></td>
+        <td><button type="button" id="b10" value="5" onclick="g(this.id)">5</button></td>
+        <td><button type="button" id="b11" value="6" onclick="g(this.id)">6</button></td>
+        <td><button type="button" id="b12" value="*" onclick="g(this.id)">*</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="b13" value="3" onclick="g(this.id)">3</button></td>
+        <td><button type="button" id="b14" value="2" onclick="g(this.id)">2</button></td>
+        <td><button type="button" id="b15" value="1" onclick="g(this.id)">1</button></td>
+        <td><button type="button" id="b16" value="-" onclick="g(this.id)">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="b17" value="0" onclick="g(this.id)">0</button></td>
+        <td><button type="button" id="b18" value="." onclick="g(this.id)">.</button></td>
+        <td><button type="button" id="b19" onclick="kq" onclick="g(this.id)">=</button></td>
+        <td><button type="button" id="b20" value="+" onclick="g(this.id)">+</button></td>
     </tr>
 </table>
+</form>
+<script src="bai_tap_3_2.js">
+</script>
 </body>
 </html>
