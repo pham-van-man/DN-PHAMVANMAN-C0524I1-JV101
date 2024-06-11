@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng của cơ thể</h1>
+chiều cao (m):<input type="number" id="chieu-cao" value=""><br><br>
+cân nặng (kg):<input type="number" id="can-nang" value=""><br><br>
+<input type="button" id="count" value="count" onclick="kiemTra()">
+<p id="ket-qua"></p>
+<script>
+    function kiemTra(){
+        let chieuCao = document.getElementById("chieu-cao").value
+        let canNang = document.getElementById("can-nang").value
+        let ketQua = canNang / chieuCao ** 2
+        if (ketQua<18.5){
+            document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(underweight)'
+        }
+        else {
+            if (ketQua<25){
+                document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(normal)'
+            }
+            else{
+                if(ketQua<30){
+                    document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(overweight)'
+                }
+                else{
+                    document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(obese)'
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

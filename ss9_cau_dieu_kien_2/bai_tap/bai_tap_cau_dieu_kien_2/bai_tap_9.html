@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberA=+prompt('nhập vào số a')
+    let numberB=+prompt('nhập vào số b')
+    let numberC=+prompt('nhập vào số c')
+if(numberA>0){
+    if(numberB>0){
+        if (numberC>0){
+            if(numberA+numberB>numberC){
+                if(numberB+numberC >numberA){
+                    if (numberA+numberC>numberB){
+                        alert('đây đích thị là các cạnh của một tam giác')
+                    }
+                    else {
+                        alert('đó không phải là các cạnh của một tam giác')
+                    }
+                }
+                else {
+                    alert('đó không phải là các cạnh của một tam giác')
+                }
+            }
+            else {
+                alert('đó không phải là các cạnh của một tam giác')
+            }
+        }else {
+            alert('đó không phải là các cạnh của một tam giác')
+        }
+    }else {
+        alert('đó không phải là các cạnh của một tam giác')
+    }
+}
+else {
+    alert('đó không phải là các cạnh của một tam giác')
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let giaTriA=+prompt('nhập giá trị a')
+    let giaTriB=+prompt('nhập giá trị b')
+    let giaTriC=+prompt('nhập giá trị c')
+    if(giaTriA==0){
+        alert('phương trình vô nghiệm')
+    }else {
+        let delta=(giaTriB**2)-(4*giaTriA*giaTriC)
+        if(delta<0){
+            alert('phương trình vô nghiệm')
+        }
+        else {
+            if(delta==0){
+                alert(`phương trình có nghiệm kép là: ${(-giaTriB)/(2*giaTriA)}`)
+            }
+            else {
+                let nghiemA=(-giaTriB+Math.sqrt(delta))/(2*giaTriA)
+                let nghiemB=(-giaTriB-Math.sqrt(delta))/(2*giaTriA)
+                alert(`phương trình có 2 nghiệm là ${nghiemA}và ${nghiemB}`)
+            }
+        }
+    }
+</script>
+</body>
+</html>
