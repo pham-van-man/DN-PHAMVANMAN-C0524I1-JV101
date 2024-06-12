@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let firstNumber=1
+    let secondNumber=1
+    let total=1
+    let result=0
+    for(let i=1;i<2;i++) {
+        total=total+secondNumber
+        result = firstNumber + secondNumber;
+        firstNumber = secondNumber;
+        secondNumber = result;
+    }
+    document.write(total)
+</script>
+</body>
+</html>

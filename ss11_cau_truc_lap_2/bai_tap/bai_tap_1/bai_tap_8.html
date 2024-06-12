@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="start()">Bắt Đầu</button>
+<script>
+    function start(){
+        let number=parseInt(prompt('bạn muốn đoán trong khoảng bao nhiêu'));
+        let numberRamdom= parseInt(number/2);
+        let i=0;
+        while (i<3){
+            let numberForecast= parseInt(prompt('hãy đưa ra dự đoán'));
+            if (numberForecast==numberRamdom){
+                alert('chính xác');
+                break;
+            }
+            else {
+                alert('sai rồi');
+                i++
+            }
+        }
+        alert('bạn hết lượt rồi')
+    }
+</script>
+</body>
+</html>

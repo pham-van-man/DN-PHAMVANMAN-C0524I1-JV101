@@ -13,36 +13,36 @@
     <th>sang đồng</th>
 </tr>
         <tr>
-            <td><input type="number" id="a"></td>
-            <td><select id="a1">
-                <option value="v">VND</option>
-                <option value="u">USD</option>
+            <td><input type="number" id="soTien"></td>
+            <td><select id="dongTien1">
+                <option value="vnd1">VND</option>
+                <option value="usd1">USD</option>
             </select>
             </td>
-            <td><select id="a2">
-                <option value="v1">VND</option>
-                <option value="u1">USD</option>
+            <td><select id="dongTien2">
+                <option value="vnd2">VND</option>
+                <option value="usd2">USD</option>
             </select></td>
         </tr>
     </table>
-    <p id="k"></p>
+    <p id="ketQua"></p>
     <button onclick="c()">chuyển</button>
 <script>
     function c() {
-        let b = +document.getElementById('a').value
-        let b1 = document.getElementById('a1').value
-        let b2 = document.getElementById('a2').value
-        let b3
-        if (b1 == 'v' && b2 == 'v1') {
-            b3 = b
-        } else if (b1 == 'v' && b2 == 'u1') {
-            b3 = b / 23000
-        } else if (b1 == 'u' && b2 == 'v1') {
-            b3 = b * 23000
+        let soTien = +document.getElementById('soTien').value
+        let dongTien1 = document.getElementById('dongTien1').value
+        let dongTien2 = document.getElementById('dongTien2').value
+        let ketQua
+        if (dongTien1 == 'vnd1' && dongTien2 == 'vnd2') {
+            ketQua = soTien
+        } else if (dongTien1 == 'vnd1' && dongTien2 == 'usd2') {
+            ketQua = soTien / 23000
+        } else if (dongTien1 == 'usd1' && dongTien2 == 'vnd2') {
+            ketQua = soTien * 23000
         } else {
-            b3 = b
+            ketQua = soTien
         }
-        document.getElementById('k').innerHTML='' + b3
+        document.getElementById('ketQua').innerHTML='' + ketQua
     }
 
 </script>

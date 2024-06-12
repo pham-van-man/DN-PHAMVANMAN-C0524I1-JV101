@@ -6,35 +6,35 @@
 </head>
 <body>
 <h1>may tính</h1>
-<input type="number" id="so1">
-<input type="number" id="so2">
+<input type="number" id="number1">
+<input type="number" id="number2">
 <input type="button" id="cong" value="cộng" onclick="t()">
 <input type="button" id="tru" value="trừ" onclick="t1()">
 <input type="button" id="nhan" value="nhân" onclick="t2()">
 <input type="button" id="chia" value="chia" onclick="t3()">
-<p id="kq"></p>
+<p id="result"></p>
 <script>
     function t(){
-        let a = +document.getElementById('so1').value
-        let b= +document.getElementById('so2').value
-        let c = a +b
-        document.getElementById('kq').innerHTML=c
+        let number1 = +document.getElementById('number1').value
+        let number2= +document.getElementById('number2').value
+        let result = number1 + number2
+        document.getElementById('result').innerHTML=result
     }function t1(){
-        let a = +document.getElementById('so1').value
-        let b= +document.getElementById('so2').value
-        let c = a -b
-        document.getElementById('kq').innerHTML=c
+        let number1 = +document.getElementById('number1').value
+        let number2= +document.getElementById('number2').value
+        let result = number1 - number2
+        document.getElementById('result').innerHTML=result
     }
     function t2(){
-        let a = +document.getElementById('so1').value
-        let b= +document.getElementById('so2').value
-        let c = a *b
-        document.getElementById('kq').innerHTML=c
+        let number1 = +document.getElementById('number1').value
+        let number2= +document.getElementById('number2').value
+        let result = number1 * number2
+        document.getElementById('result').innerHTML=result
     }function t3(){
-        let a = +document.getElementById('so1').value
-        let b= +document.getElementById('so2').value
-        let c = a /b
-        document.getElementById('kq').innerHTML=c
+        let number1 = +document.getElementById('number1').value
+        let number2= +document.getElementById('number2').value
+        let result = number1 / number2
+        document.getElementById('result').innerHTML=result
     }
 </script>
 </body>
