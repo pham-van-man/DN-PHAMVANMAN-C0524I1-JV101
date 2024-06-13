@@ -6,25 +6,25 @@
 </head>
 <body>
 <script>
-    let numberOder=+prompt('bạn muốn bao nhiêu')
-    let firstNumber=1
-    let secondNumber=1
-    let count=0
+    let numberOder=+prompt('bạn muốn bao nhiêu');
+    let firstNumber=1;
+    let secondNumber=1;
+    let count=0;
     for(let i=1;i<100000000;i++){
         if(count<2){
-            document.write(firstNumber+'<br>'+secondNumber+'<br>')
-            count = count+2
+            document.write(firstNumber+'<br>'+secondNumber+'<br>');
+            count = count+2;
         }
         else {
             if (count < numberOder) {
                 let result = firstNumber + secondNumber;
                 document.write(result + '<br>');
                 count++;
-                firstNumber = secondNumber
-                secondNumber = result
+                firstNumber = secondNumber;
+                secondNumber = result;
             }
             else {
-                break
+                break;
             }
         }
     }

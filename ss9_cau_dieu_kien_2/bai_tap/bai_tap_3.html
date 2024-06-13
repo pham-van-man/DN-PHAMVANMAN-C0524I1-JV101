@@ -32,25 +32,24 @@
         <td><input type="button" id="nhan" value="*" onclick="nhapDuLieu(this.value)"></td>
     </tr>
     <tr>
-        <td><input type="button" id="ac" value="AC" onclick="nhapLai(this.value)"></td>
+        <td><input type="button" id="ac" value="AC" onclick="nhapLai()"></td>
         <td><input type="button" id="number0" value="0" onclick="nhapDuLieu(this.value)"></td>
-        <td><input type="button" id="bang" value="=" onclick="result(this.value)"></td>
+        <td><input type="button" id="bang" value="=" onclick="result()"></td>
         <td><input type="button" id="chia" value="/" onclick="nhapDuLieu(this.value)"></td>
     </tr>
 </table>
 </form>
 <script>
-    let baiToan = ""
+    let ketQua = document.getElementById("display");
 function nhapDuLieu(value){
-        baiToan = baiToan + value
-    document.getElementById("display").value= baiToan
+        ketQua.value = ketQua.value + value;
     }
     function result() {
-        let result = eval(baiToan.value);
-        baiToan.value = result;
+        let result = eval(ketQua.value);
+        ketQua.value = result;
     }
     function nhapLai() {
-        baiToan.value ="";
+        ketQua.value ="";
 }
 </script>
 </body>

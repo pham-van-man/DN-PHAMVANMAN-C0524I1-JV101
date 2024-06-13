@@ -6,8 +6,21 @@
 </head>
 <body>
 <script>
-    let soGioGoiDien=+prompt('nhập số giờ mà gia đình bạn đã gọi')
-    alert(`số tiền bạn phải trả là ${soGioGoiDien*33000} VND`)
+    let soGioGoiDien=+prompt('nhập số giờ mà gia đình bạn đã gọi');
+    let soTienPhaiTra=0;
+    if (soGioGoiDien>=300){
+        soTienPhaiTra=soGioGoiDien*3300;
+        alert(`số tiền bạn phải trả là ${soTienPhaiTra} VND`);
+    } else if (soGioGoiDien>=200){
+        soTienPhaiTra=soGioGoiDien*3000;
+        alert(`số tiền bạn phải trả là ${soTienPhaiTra} VND`);
+    } else if (soGioGoiDien>=100){
+        soTienPhaiTra=soGioGoiDien*2800;
+        alert(`số tiền bạn phải trả là ${soTienPhaiTra} VND`);
+    } else{
+        soTienPhaiTra=soGioGoiDien*2700;
+        alert(`số tiền bạn phải trả là ${soTienPhaiTra} VND`);
+    }
 </script>
 </body>
 </html>

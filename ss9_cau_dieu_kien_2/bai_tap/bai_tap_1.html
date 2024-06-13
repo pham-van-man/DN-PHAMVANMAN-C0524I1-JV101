@@ -12,22 +12,22 @@ cân nặng (kg):<input type="number" id="can-nang" value=""><br><br>
 <p id="ket-qua"></p>
 <script>
     function kiemTra(){
-        let chieuCao = document.getElementById("chieu-cao").value
-        let canNang = document.getElementById("can-nang").value
-        let ketQua = canNang / chieuCao ** 2
+        let chieuCao = document.getElementById("chieu-cao").value;
+        let canNang = document.getElementById("can-nang").value;
+        let ketQua = canNang / chieuCao ** 2;
         if (ketQua<18.5){
-            document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(underweight)'
+            document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(underweight)';
         }
         else {
             if (ketQua<25){
-                document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(normal)'
+                document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(normal)';
             }
             else{
                 if(ketQua<30){
-                    document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(overweight)'
+                    document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(overweight)';
                 }
                 else{
-                    document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(obese)'
+                    document.getElementById("ket-qua").innerHTML='điểm BMI của bạn là: '+ ketQua +'(obese)';
                 }
             }
         }

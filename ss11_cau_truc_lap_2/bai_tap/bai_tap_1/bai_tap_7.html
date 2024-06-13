@@ -6,21 +6,15 @@
 </head>
 <body>
 <script>
-    for(let i=1;i<=100;i++){
-        if( !(i%3) && !(i%5) ) {
-            document.write('fizzbuzz'+'<br>')
-        }
-        else {
-            if (!(i % 3)) {
-                document.write('fizz' + '<br>');
-            } else {
-                if (!(i % 5)) {
-                    document.write('buzz' + '<br>')
-                }
-                else {
-                    document.write(i+'<br>')
-                }
-            }
+    for(let i=1;i<=100;i++) {
+        if (!(i % 3) && !(i % 5)) {
+            document.write('fizzbuzz' + '<br>');
+        } else if (!(i % 3)) {
+            document.write('fizz' + '<br>');
+        } else if (!(i % 5)) {
+            document.write('buzz' + '<br>');
+        } else {
+            document.write(i + '<br>');
         }
     }
 </script>
