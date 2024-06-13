@@ -7,22 +7,34 @@
 <body>
 <button onclick="start()">Bắt Đầu</button>
 <script>
-    function start(){
-        let number=parseInt(prompt('bạn muốn đoán trong khoảng bao nhiêu'));
-        let numberRamdom= parseInt(number/2);
-        let i=0;
-        while (i<3){
-            let numberForecast= parseInt(prompt('hãy đưa ra dự đoán'));
-            if (numberForecast==numberRamdom){
+    function start() {
+        let number = +prompt('bạn muốn đoán trong khoảng bao nhiêu');
+        while (number / number !== 1) {
+            number = +prompt('bạn muốn đoán trong khoảng bao nhiêu');
+        }
+        let numberRamdom = parseInt(Math.random() * (number++)+1);
+        let i = 0;
+        while (i < 3) {
+            var numberForecast = parseInt(prompt('hãy đưa ra dự đoán'));
+            while (numberForecast / numberForecast != 1) {
+                numberForecast = parseInt(prompt('hãy đưa ra dự đoán'));
+            }
+            if (numberForecast == numberRamdom) {
                 alert('chính xác');
                 break;
-            }
-            else {
-                alert('sai rồi');
-                i++
+            } else if (numberForecast > numberRamdom) {
+                alert('số bạn đoán lớn hơn');
+                i++;
+            } else {
+                alert('số bạn đoán nhỏ hơn');
+                i++;
             }
         }
-        alert('bạn hết lượt rồi');
+        if (numberForecast == numberRamdom) {
+            alert('xin chúc mừng');
+        } else {
+            alert('bạn hết lượt rồi');
+        }
     }
 </script>
 </body>

@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
-    let table= '<table border="1" style="border-collapse: collapse; margin: 0 auto; width: 600px; height: 300px">';
-    let i=0;
-    let j=0;
-    for (i=2;i<11;i++){
-        table+= '<tr>';
-        for (j=2;j<10;j++){
-            table+='<td>'+ j +'x' + i + '=' + j*i +'</td>';
-        }table+='</tr>';
-    }table+='</table>';
+    let table = '<table border="1" style="border-collapse: collapse; margin: 0 auto; width: 600px; height: 300px">';
+    let i = 0;
+    let j = 0;
+    for (i = 2; i < 11; i++) {
+        table += '<tr>';
+        for (j = 2; j < 10; j++) {
+            table += '<td>' + j + 'x' + i + '=' + j * i + '</td>';
+        }
+        table += '</tr>';
+    }
+    table += '</table>';
     document.write(table);
 </script>
 </body>

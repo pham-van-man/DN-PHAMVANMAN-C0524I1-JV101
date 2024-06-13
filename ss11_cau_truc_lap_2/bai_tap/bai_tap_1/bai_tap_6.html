@@ -6,11 +6,11 @@
 </head>
 <body>
 <script>
-    let number=1;
-    let total=0;
-    let count=0;
-    for (let i=0;i<10000000;i++){
-        if (count<10) {
+    let number = 1;
+    let total = 0;
+    let count = 0;
+    for (let i = 0; i < 10000000; i++) {
+        if (count < 10) {
             if (!(number % 7)) {
                 total = total + number;
                 count++;
@@ -18,8 +18,7 @@
             } else {
                 number++;
             }
-        }
-        else {
+        } else {
             break;
         }
     }

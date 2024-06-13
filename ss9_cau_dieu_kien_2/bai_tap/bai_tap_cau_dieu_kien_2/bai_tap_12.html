@@ -6,22 +6,22 @@
 </head>
 <body>
 <script>
-    let numberOwe=+prompt('nhập số tiền bạn muốn nợ chúng tôi');
-    let numberMonth=+prompt('bán muốn trả nợ trong bao lâu (tháng)');
-    let countMonth=1;
-    let tax=0;
-    let pay=numberOwe;
-    let payMonth=0;
-    let text='';
-    while (countMonth<=numberMonth){
-        tax=(pay/100)*3;
-        pay=pay+tax;
-        payMonth= pay/numberMonth;
-        pay=pay-payMonth;
-        text=text+`bạn phải trả ${parseInt(payMonth)} VND trong tháng ${countMonth} <br>`;
-        countMonth= ++countMonth;
+    let numberOwe = +prompt('nhập số tiền bạn muốn nợ chúng tôi');
+    let numberMonth = +prompt('bán muốn trả nợ trong bao lâu (tháng)');
+    let countMonth = 1;
+    let tax = 0;
+    let pay = numberOwe;
+    let payMonth = 0;
+    let text = '';
+    while (countMonth <= numberMonth) {
+        tax = (pay / 100) * 3;
+        pay = pay + tax;
+        payMonth = pay / numberMonth;
+        pay = pay - payMonth;
+        text = text + `bạn phải trả ${parseInt(payMonth)} VND trong tháng ${countMonth} <br>`;
+        countMonth = ++countMonth;
     }
-document.write(text);
+    document.write(text);
 </script>
 </body>
 </html>

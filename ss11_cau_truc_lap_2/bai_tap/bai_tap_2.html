@@ -6,23 +6,23 @@
 </head>
 <body>
 <script>
-    let number= parseInt(prompt('nhập vào số nguyên tố muốn lấy ra'));
-    let count=0;
-    let count1=0;
-            for(let number1 = 2; number1 < 1000000000000 ; number1++) {
-                if (count1< number) {
-                    for (let number2=1; number2<=number1; number2++){
-                        if(number1%number2==0) count++;
-                    }
-                    if (count == 2) {
-                        document.write(number1 + "<br>");
-                        count1++;
-                    }
-                    count = 0;
-                    } else {
-                    break;
-                }
+    let number = parseInt(prompt('nhập vào số nguyên tố muốn lấy ra'));
+    let count = 0;
+    let count1 = 0;
+    for (let number1 = 2; number1 < 1000000000000; number1++) {
+        if (count1 < number) {
+            for (let number2 = 1; number2 <= number1; number2++) {
+                if (number1 % number2 == 0) count++;
             }
+            if (count == 2) {
+                document.write(number1 + "<br>");
+                count1++;
+            }
+            count = 0;
+        } else {
+            break;
+        }
+    }
 </script>
 </body>
 </html>
