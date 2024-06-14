@@ -15,14 +15,12 @@
         let delta = (giaTriB ** 2) - (4 * giaTriA * giaTriC);
         if (delta < 0) {
             alert('phương trình vô nghiệm');
+        } else if (delta == 0) {
+            alert(`phương trình có nghiệm kép là: ${(-giaTriB) / (2 * giaTriA)}`);
         } else {
-            if (delta == 0) {
-                alert(`phương trình có nghiệm kép là: ${(-giaTriB) / (2 * giaTriA)}`);
-            } else {
-                let nghiemA = (-giaTriB + Math.sqrt(delta)) / (2 * giaTriA);
-                let nghiemB = (-giaTriB - Math.sqrt(delta)) / (2 * giaTriA);
-                alert(`phương trình có 2 nghiệm là ${nghiemA}và ${nghiemB}`);
-            }
+            let nghiemA = (-giaTriB + Math.sqrt(delta)) / (2 * giaTriA);
+            let nghiemB = (-giaTriB - Math.sqrt(delta)) / (2 * giaTriA);
+            alert(`phương trình có 2 nghiệm là ${nghiemA}và ${nghiemB}`);
         }
     }
 </script>

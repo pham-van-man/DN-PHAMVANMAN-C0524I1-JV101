@@ -7,10 +7,14 @@
 <body>
 <script>
     let income = +prompt('thu nhập của bạn trong tháng vừa rồi là bao nhiêu');
-    if (income < 11000000) {
-        alert('bạn không cần nộp thuế');
-    } else {
+    if (income > 50000000) {
+        alert(`bạn cần nộp cho nhà nước ${(income / 100) * 20}`);
+    } else if (income > 2800000) {
+        alert(`bạn cần nộp cho nhà nước ${(income / 100) * 15}`);
+    } else if (income > 1100000) {
         alert(`bạn cần nộp cho nhà nước ${(income / 100) * 10}`);
+    } else {
+        alert('bạn không cần nộp thuế');
     }
 </script>
 </body>

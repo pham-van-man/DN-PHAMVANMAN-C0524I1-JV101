@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberOwe = +prompt('bạn muốn gửi vào bao nhiêu');
+    let numberMonth = +prompt('bán muốn gửi trong bao lâu (tháng)');
+    let countMonth = 0;
+    let tax = 0;
+    let pay = numberOwe;
+    if (numberOwe > 1000000000) {
+        while (countMonth < numberMonth) {
+            tax = (pay / 100) * 3;
+            pay += tax;
+            countMonth = ++countMonth;
+        }
+    } else if (numberOwe > 500000000) {
+        while (countMonth < numberMonth) {
+            tax = (pay / 100) * 2;
+            pay += tax;
+            countMonth = ++countMonth;
+
+        }
+    } else {
+        while (countMonth < numberMonth) {
+            tax = (pay / 100);
+            pay += tax;
+            countMonth = ++countMonth;
+
+        }
+    }
+    document.write(parseInt(pay));
+</script>
+</body>
+</html>
