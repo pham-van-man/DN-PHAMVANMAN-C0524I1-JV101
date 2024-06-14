@@ -5,9 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-<input>
 <script>
-
+    var num = window.prompt();
+    console.log(num);
+    var str = num.toString();
+    console.log(str);
+    var result = [str[0]];
+    console.log(result);
+    for (var x = 1; x < str.length; x++) {
+        console.log(x);
+        if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+            console.log(str);
+            result.push('-', str[x]);
+            console.log(result);
+        } else {
+            result.push(str[x]);
+            console.log(result);
+        }
+    }
+    document.write(result.join(''));
+    console.log(result);
 </script>
 </body>
 </html>
