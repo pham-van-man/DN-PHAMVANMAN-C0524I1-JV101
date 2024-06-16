@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer = [12, 123, 14, 15, 16, 17, 18, 1, 654, 45];
+    let number = +prompt('nhap vao mot so bat ki');
+    count = 0;
+    for (let i = 0; i < integer.length; i++) {
+        if (integer[i] === number) {
+            alert('no co trong mang');
+            count++;
+            break;
+        }
+    }
+    if (count === 0) {
+        alert('no khong co trong mang');
+    }
+</script>
+</body>
+</html>

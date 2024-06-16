@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer = [];
+    let max = integer[0];
+    for (let i = 0; i < 10; i++) {
+        integer.push(prompt('nhap vao so thu ' + i));
+    }
+    integer.sort(function (a, b) {
+        return a - b;
+    })
+    document.write(integer);
+</script>
+</body>
+</html>

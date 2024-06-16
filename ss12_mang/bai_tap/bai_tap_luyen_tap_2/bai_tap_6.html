@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('nhap vao mot chuoi');
+    let result = [];
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === '-') {
+            result[i] = '_';
+        } else {
+            result[i] = string[i];
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>

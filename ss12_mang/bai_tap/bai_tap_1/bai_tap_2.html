@@ -7,20 +7,20 @@
 <body>
 <script>
     /*  let number = prompt('nhập số vào đây');
-      let result = number[0];
+      let dictionary = number[0];
       let result1 = number[0];
       for (let i = 1; i < number.length; i++) {
-          if (!(result % 2) && !(number[i] % 2)) {
+          if (!(dictionary % 2) && !(number[i] % 2)) {
               result1 += '-' + number[i];
-              result = number[i];
+              dictionary = number[i];
           } else {
               result1 += number[i];
-              result = number[i];
+              dictionary = number[i];
           }
       }
       document.write(result1);*/
     let num = prompt();
-    let result = [];
+    let dictionary = [];
     for (let x = 0; x < num.length; x++) {
         if (num[x] % 2 === 0 && num[x + 1] % 2 === 0) {
             result.push(num[x],'-');

@@ -7,35 +7,35 @@
 <body>
 <script>
     /*let string = prompt();
-    let chuHoa = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-    let chuThuong = 'qwertyuiopasdfghjklzxcvbnm';
-    let result = [];
+    let engLish = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    let tiengViet = 'qwertyuiopasdfghjklzxcvbnm';
+    let dictionary = [];
     for (let i = 0; i < string.length; i++) {
-        if (chuHoa.indexOf(string[i]) !== -1) {
-            result.push(string[i].toLowerCase());
+        if (engLish.indexOf(string[i]) !== -1) {
+            dictionary.push(string[i].toLowerCase());
         }
-        if (chuThuong.indexOf(string[i]) !== -1) {
-            result.push(string[i].toUpperCase());
+        if (tiengViet.indexOf(string[i]) !== -1) {
+            dictionary.push(string[i].toUpperCase());
         }else {
-            result.push(string[i])
+            dictionary.push(string[i])
         }
     }
-    document.write(result.join(''));*/
+    document.write(dictionary.join(''));*/
     let string = prompt();
-    let chuHoa = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-    let chuThuong = 'qwertyuiopasdfghjklzxcvbnm';
-    let result = [];
+    let engLish = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    let tiengViet = 'qwertyuiopasdfghjklzxcvbnm';
+    let dictionary = [];
     for (let i = 0; i < string.length; i++) {
-        if (chuHoa.indexOf(string[i]) !== -1) {
-            result.push(chuThuong[chuHoa.indexOf(string[i])]);
+        if (engLish.indexOf(string[i]) !== -1) {
+            dictionary.push(tiengViet[engLish.indexOf(string[i])]);
         }
-        if (chuThuong.indexOf(string[i]) !== -1) {
-            result.push(chuHoa[chuThuong.indexOf(string[i])]);
+        if (tiengViet.indexOf(string[i]) !== -1) {
+            dictionary.push(engLish[tiengViet.indexOf(string[i])]);
         }else {
-            result.push(string[i])
+            dictionary.push(string[i])
         }
     }
-    document.write(result.join(''));
+    document.write(dictionary.join(''));
 </script>
 </body>
 </html>

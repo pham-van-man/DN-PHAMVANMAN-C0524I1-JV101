@@ -6,25 +6,18 @@
 </head>
 <body>
 <script>
-    var num = window.prompt();
-    console.log(num);
-    var str = num.toString();
-    console.log(str);
-    var result = [str[0]];
-    console.log(result);
-    for (var x = 1; x < str.length; x++) {
-        console.log(x);
-        if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
-            console.log(str);
-            result.push('-', str[x]);
-            console.log(result);
+    function processConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "Excellent. We'll play a nice game of chess.";
         } else {
-            result.push(str[x]);
-            console.log(result);
+            result = "Maybe later then.";
         }
+        return result;
     }
-    document.write(result.join(''));
-    console.log(result);
+    let confirmAnswer = confirm("Shall we play a game?");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
 </script>
 </body>
 </html>

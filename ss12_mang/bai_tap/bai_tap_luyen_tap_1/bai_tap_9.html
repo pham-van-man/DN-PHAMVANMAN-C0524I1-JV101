@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integerA = [];
+    let integerB = [];
+    for (let i = 0; i < 10; i++) {
+        integerA[i] = prompt('nhap gia tri thu ' + i + ' cho mang a');
+    }
+    for (let i = 0; i < 10; i++) {
+        integerB[i] = prompt('nhap gia tri thu ' + i + ' cho mang b');
+    }
+    let integerC = integerA.concat(integerB);
+    document.write(integerC);
+</script>
+</body>
+</html>
