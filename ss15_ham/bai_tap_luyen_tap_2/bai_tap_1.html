@@ -6,9 +6,14 @@
 </head>
 <body>
 <script>
-function binhPhuong(){
+    function square(number) {
+        number = number ** 2;
+        return number;
+    }
 
-}
+    let number1 = +prompt('nhap vao so ma ban muon binh phuong');
+    let result = square(number1);
+    document.write(result);
 </script>
 </body>
 </html>

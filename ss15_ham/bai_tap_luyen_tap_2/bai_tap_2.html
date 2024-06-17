@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function dienTinh(number) {
+        number = Math.PI * number ** 2;
+        return number
+    }
+
+    function chuVi(number) {
+        number = 2 * Math.PI * number;
+        return number;
+    }
+
+    let number1 = +prompt('nhap vao ban kinh duong tron');
+    let result = dienTinh(number1);
+    let result1 = chuVi(number1);
+    document.write('dien tich hinh tron bang ' + parseInt(result) + '<br>');
+    document.write('chu vi hinh tron bang ' + parseInt(result1))
+</script>
+</body>
+</html>

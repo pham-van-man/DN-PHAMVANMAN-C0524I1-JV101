@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reverse(arr) {
+        /*  arr.reverse();
+          return arr;*/
+        let result;
+        result = arr[0];
+        arr[0] = arr[1];
+        arr[1] = result;
+        return arr;
+    }
+
+    let arr1 = [];
+    for (let i = 0; i < 2; i++) {
+        arr1[i] = +prompt('nhap vao so thu ' + i);
+    }
+    let result1 = reverse(arr1);
+    document.write(result1);
+</script>
+</body>
+</html>

@@ -6,14 +6,17 @@
 </head>
 <body>
 <script>
-    let numberOder = +prompt('bạn muốn bao nhiêu');
-    let firstNumber = 1;
-    let secondNumber = 1;
-    for (let count = 0; i < numberOder; i++) {
-        document.write(firstNumber + '<br>');
-        let dictionary = firstNumber + secondNumber;
-        firstNumber = secondNumber;
-        secondNumber = result;
+    let number = +prompt('bạn muốn in ra bao nhiêu so Fibonaci');
+    let number1 = 1;
+    let number2 = 1;
+    let result = 0;
+    let count = 0;
+    while (count < number) {
+        document.write(number1 + '<br>');
+        result = number1 + number2;
+        number1 = number2;
+        number2 = result;
+        count++;
     }
 </script>
 </body>

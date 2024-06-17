@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(number) {
+        let result;
+        if (number > 0 && Number.isInteger(number)) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+    }
+
+    let number1 = +prompt('nhap vao mot so bat ky');
+    let result1 = check(number1);
+    document.write(result1);
+</script>
+</body>
+</html>
