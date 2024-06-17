@@ -8,13 +8,13 @@
 <input type="number" oninput="prime()" id="integer" min="2">
 <p id="result"></p>
 <script>
-    function prime(number) {
+    function prime() {
         let integer = document.getElementById('integer').value
         /* if (integer < 2) {
              alert('phai la mot so lon hon 2');
          } else {*/
         let count = 0;
-        for (let i = 2; i < integer; i++) {
+        for (let count = 2; i < integer; i++) {
             if (!(integer % i)) {
                 count++;
             }

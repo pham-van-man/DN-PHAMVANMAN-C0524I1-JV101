@@ -13,7 +13,7 @@
             number = +prompt('bạn muốn đoán trong khoảng bao nhiêu');
         }
         let numberRamdom = parseInt(Math.random() * (number++)+1);
-        let i = 0;
+        let count = 0;
         while (i < 3) {
             var numberForecast = parseInt(prompt('hãy đưa ra dự đoán'));
             while (numberForecast / numberForecast != 1) {

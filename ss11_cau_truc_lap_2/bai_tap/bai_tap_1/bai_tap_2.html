@@ -7,15 +7,15 @@
 <body>
 <script>
     let degreeSelsius = +prompt('nhập vào nhiệt độ hiện tại');
-    if (degreeSelsius > 100) {
-        alert('hot hot hot');
-    } else {
+    do {
         if (degreeSelsius < 20) {
-            alert('so coldddd');
-        } else {
-            alert('nhệt độ là ' + degreeSelsius + ' =))');
+            degreeSelsius = +prompt('nhiệt độ hiện tại hơi lạnh');
         }
-    }
+        if (degreeSelsius > 100) {
+            degreeSelsius = +prompt('nhiệt độ hiện tại hơi nóng');
+        }
+    } while (degreeSelsius > 100 || degreeSelsius < 20)
+    alert('nhiệt độ ok đó')
 </script>
 </body>
 </html>

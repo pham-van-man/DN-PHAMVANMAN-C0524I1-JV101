@@ -10,14 +10,14 @@
     let engLish = 'QWERTYUIOPASDFGHJKLZXCVBNM';
     let tiengViet = 'qwertyuiopasdfghjklzxcvbnm';
     let dictionary = [];
-    for (let i = 0; i < string.length; i++) {
-        if (engLish.indexOf(string[i]) !== -1) {
-            dictionary.push(string[i].toLowerCase());
+    for (let count = 0; count < string.length; count++) {
+        if (engLish.indexOf(string[count]) !== -1) {
+            dictionary.push(string[count].toLowerCase());
         }
-        if (tiengViet.indexOf(string[i]) !== -1) {
-            dictionary.push(string[i].toUpperCase());
+        if (tiengViet.indexOf(string[count]) !== -1) {
+            dictionary.push(string[count].toUpperCase());
         }else {
-            dictionary.push(string[i])
+            dictionary.push(string[count])
         }
     }
     document.write(dictionary.join(''));*/
@@ -25,7 +25,7 @@
     let engLish = 'QWERTYUIOPASDFGHJKLZXCVBNM';
     let tiengViet = 'qwertyuiopasdfghjklzxcvbnm';
     let dictionary = [];
-    for (let i = 0; i < string.length; i++) {
+    for (let count = 0; i < string.length; i++) {
         if (engLish.indexOf(string[i]) !== -1) {
             dictionary.push(tiengViet[engLish.indexOf(string[i])]);
         }

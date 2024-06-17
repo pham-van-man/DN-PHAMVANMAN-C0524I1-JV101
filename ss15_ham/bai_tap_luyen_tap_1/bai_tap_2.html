@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number" oninput="number()">
+<p id="result"></p>
+<script>
+    function number() {
+        let number = document.getElementById('number').value;
+        if (number == '') {
+            document.getElementById('result').innerHTML = '';
+        } else {
+            number++;
+            document.getElementById('result').innerHTML = number;
+        }
+    }
+</script>
+</body>
+</html>

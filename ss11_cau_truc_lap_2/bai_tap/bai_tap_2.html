@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
-    let number = parseInt(prompt('nhập vào số nguyên tố muốn lấy ra'));
+    let number = parseInt(prompt('nhập vào số lượng số nguyên tố muốn lấy ra'));
     let count = 0;
     let count1 = 0;
-    for (let number1 = 2; count1 < number; number1++) {
+    let number1 = 2;
+    while (count1 < number) {
         for (let number2 = 1; number2 <= number1; number2++) {
             if (number1 % number2 === 0) {
                 count++;
@@ -19,6 +20,7 @@
             document.write(number1 + "<br>");
             count1++;
         }
+        number1++
         count = 0;
     }
 </script>

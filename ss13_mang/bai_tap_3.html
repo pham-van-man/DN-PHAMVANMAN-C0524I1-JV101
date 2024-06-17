@@ -12,10 +12,10 @@
     let board = [];
     let data = "";
     let count = 1;
-    for (let i = 0; i < 5; i++) {
+    for (let count = 0; i < 5; i++) {
         board[i] = ['(.)', '(.)', '(.)', '(.)', '(.)'];
     }
-    for (let i = 0; i < 5; i++) {
+    for (let count = 0; i < 5; i++) {
         for (let j = 0; j < 5; j++) {
             data += board[i][j] + "&nbsp;";
         }
@@ -34,14 +34,14 @@
             board[X][Y] = "x";
             count++;
         }
-        for (let i = 0; i < 5; i++) {
+        for (let count = 0; i < 5; i++) {
             for (let j = 0; j < 5; j++) {
                 data += board[i][j] + "&nbsp;";
             }
             data += "<br>";
         }
         document.getElementById("coCaRo").innerHTML = data;
-        for (let i = 0; i < 5; i++) {
+        for (let count = 0; i < 5; i++) {
             for (let j = 0; j < 5; j++) {
                 if (board[i][j] === 'x' && board[i][j + 1] === 'x' && board[i][j + 2] === 'x' ||
                     board[i][j] === 'x' && board[i + 1][j] === 'x' && board[i + 2][j] === 'x' ||
@@ -58,7 +58,6 @@
             }
         }
     }
-
 </script>
 </body>
 </html>

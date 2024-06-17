@@ -6,17 +6,19 @@
 </head>
 <body>
 <script>
-    let firstNumber = 1;
-    let secondNumber = 1;
-    let total = 1;
-    let dictionary = 0;
-    for (let i = 1; i < 2; i++) {
-        total = total + secondNumber;
-        result = firstNumber + secondNumber;
-        firstNumber = secondNumber;
-        secondNumber = result;
+    let number1 = 0;
+    let number2 = 1;
+    let sum = 0;
+    let result = 1;
+    let count = 0;
+    while (count < 2) {
+        sum += number2;
+        result = number1 + number2;
+        number1 = number2;
+        number2 = result;
+        count++;
     }
-    document.write(total);
+    document.write(sum);
 </script>
 </body>
 </html>
