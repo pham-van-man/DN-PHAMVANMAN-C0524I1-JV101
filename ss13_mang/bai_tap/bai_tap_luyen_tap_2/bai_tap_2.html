@@ -7,7 +7,11 @@
 <body>
 <script>
     let string = ['c', 's', 'c', '2', '6', '1'];
-    document.write(string.reverse());
+    let result = [];
+    for (let i = 0; i < string.length; i++) {
+        result.push(string[(string.length - 1) - i]);
+    }
+    document.write(result);
 </script>
 </body>
 </html>

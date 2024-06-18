@@ -19,13 +19,13 @@
           }
       }
       document.write(result1);*/
-    let num = prompt();
-    let dictionary = [];
-    for (let x = 0; x < num.length; x++) {
-        if (num[x] % 2 === 0 && num[x + 1] % 2 === 0) {
-            result.push(num[x],'-');
+    let num = prompt('nhap vao mot day so');
+    let result = [];
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] % 2 === 0 && num[i + 1] % 2 === 0) {
+            result.push(num[i],'-');
         } else {
-            result.push(num[x]);
+            result.push(num[i]);
         }
     }
     document.write(result.join(''));

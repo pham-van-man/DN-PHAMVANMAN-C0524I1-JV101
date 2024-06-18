@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(arr1) {
+        let arr2 = [];
+        for (let i = 0; i < arr1.length; i++) {
+            arr2.push(arr1[i]);
+        }
+        let arr3 = arr2.reverse();
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr3[i] !== arr1[i])
+                return false;
+        }
+        return true;
+    }
+
+    let arr = prompt('nhap vao mot chuoi de kiem tra');
+    let result1 = isPalindrome(arr);
+    document.write(result1);
+</script>
+</body>
+</html>
