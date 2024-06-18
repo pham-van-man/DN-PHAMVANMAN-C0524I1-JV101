@@ -8,8 +8,10 @@
 <script>
     let integer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let number = +prompt('nhap vao mot so');
+    let count = 0;
     for (let i = 0; i < integer.length; i++) {
         if (integer[i] === number) {
+            count++;
             for (let j = i; j < integer.length; j++) {
                 integer[j] = integer[j + 1];
             }
@@ -17,7 +19,11 @@
             integer.push(0);
         }
     }
-    document.write(integer);
+    if (count === 0) {
+        document.write('trong mang khong co so nay')
+    } else {
+        document.write(integer);
+    }
 </script>
 </body>
 </html>

@@ -7,12 +7,19 @@
 <body>
 <script>
     let integer = [];
+    let min;
     for (let i = 0; i < 10; i++) {
         integer.push(prompt('nhap vao so thu ' + i));
     }
-    integer.sort(function (a, b) {
-        return a - b;
-    })
+    for (let i = 0; i < integer.length; i++) {
+        for (let j = 0; j < integer.length; j++) {
+            if (parseInt(integer[i]) > parseInt(integer[j])) {
+                min = integer[j];
+                integer[j] = integer[i];
+                integer[i] = min;
+            }
+        }
+    }
     document.write(integer);
 </script>
 </body>

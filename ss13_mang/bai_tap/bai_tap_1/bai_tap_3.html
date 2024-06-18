@@ -8,13 +8,13 @@
 <script>
     /*let string = prompt();
     let engLish = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-    let tiengViet = 'qwertyuiopasdfghjklzxcvbnm';
+    let vietnamese = 'qwertyuiopasdfghjklzxcvbnm';
     let dictionary = [];
     for (let count = 0; count < string.length; count++) {
         if (engLish.indexOf(string[count]) !== -1) {
             dictionary.push(string[count].toLowerCase());
         }
-        if (tiengViet.indexOf(string[count]) !== -1) {
+        if (vietnamese.indexOf(string[count]) !== -1) {
             dictionary.push(string[count].toUpperCase());
         }else {
             dictionary.push(string[count])
@@ -23,14 +23,14 @@
     document.write(dictionary.join(''));*/
     let string = prompt();
     let engLish = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-    let tiengViet = 'qwertyuiopasdfghjklzxcvbnm';
+    let vietnamese = 'qwertyuiopasdfghjklzxcvbnm';
     let dictionary = [];
     for (let i = 0; i < string.length; i++) {
         if (engLish.indexOf(string[i]) !== -1) {
-            dictionary.push(tiengViet[engLish.indexOf(string[i])]);
+            dictionary.push(vietnamese[engLish.indexOf(string[i])]);
         }
-        if (tiengViet.indexOf(string[i]) !== -1) {
-            dictionary.push(engLish[tiengViet.indexOf(string[i])]);
+        if (vietnamese.indexOf(string[i]) !== -1) {
+            dictionary.push(engLish[vietnamese.indexOf(string[i])]);
         }else {
             dictionary.push(string[i])
         }

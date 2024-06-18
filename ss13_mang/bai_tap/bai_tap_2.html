@@ -6,16 +6,16 @@
 </head>
 <body>
 <script>
-    let string = prompt();
-    let engLish = ['apple', 'banana'];
-    let tiengViet = ['quả táo', 'quả chuối'];
-    let dictionary = [];
-    if (engLish.indexOf(string) !== -1) {
-        dictionary.push(tiengViet[engLish.indexOf(string)]);
-        document.write(dictionary);
-    } else if (tiengViet.indexOf(string) !== -1) {
-        dictionary.push(engLish[tiengViet.indexOf(string)]);
-        document.write(dictionary);
+    let string = prompt('nhap vao tu muon dich');
+    let english = ['apple', 'banana'];
+    let vietnamese = ['quả táo', 'quả chuối'];
+    /* let dictionary = [];*/
+    if (english.indexOf(string) !== -1) {
+        /*   dictionary.push(vietnamese[english.indexOf(string)]);*/
+        document.write(vietnamese[english.indexOf(string)]);
+    } else if (vietnamese.indexOf(string) !== -1) {
+        /*  dictionary.push(english[vietnamese.indexOf(string)]);*/
+        document.write(english[vietnamese.indexOf(string)]);
     } else {
         document.write('thư viện chúng tôi chưa có từ này');
     }

@@ -8,13 +8,19 @@
 <script>
     let integerA = [];
     let integerB = [];
+    let integerC = [];
     for (let i = 0; i < 10; i++) {
         integerA[i] = prompt('nhap gia tri thu ' + i + ' cho mang a');
     }
     for (let i = 0; i < 10; i++) {
         integerB[i] = prompt('nhap gia tri thu ' + i + ' cho mang b');
     }
-    let integerC = integerA.concat(integerB);
+    for (let i = 0; i < 10; i++) {
+        integerA.push(integerB[i]);
+    }
+    for (let i = 0; i < 20; i++) {
+        integerC.push(integerA[i]);
+    }
     document.write(integerC);
 </script>
 </body>
