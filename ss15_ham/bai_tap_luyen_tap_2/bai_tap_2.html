@@ -6,21 +6,21 @@
 </head>
 <body>
 <script>
-    function dienTinh(number) {
+    function area(number) {
         number = Math.PI * number ** 2;
         return number
     }
 
-    function chuVi(number) {
+    function circumferenceCalculation(number) {
         number = 2 * Math.PI * number;
         return number;
     }
 
-    let number1 = +prompt('nhap vao ban kinh duong tron');
-    let result = dienTinh(number1);
-    let result1 = chuVi(number1);
-    document.write('dien tich hinh tron bang ' + parseInt(result) + '<br>');
-    document.write('chu vi hinh tron bang ' + parseInt(result1))
+    let number = +prompt('nhap vao ban kinh duong tron');
+    let resultArea = area(number);
+    let resultCircumference = circumferenceCalculation(number);
+    document.write('dien tich hinh tron bang ' + parseInt(resultArea) + '<br>');
+    document.write('chu vi hinh tron bang ' + parseInt(resultCircumference))
 </script>
 </body>
 </html>

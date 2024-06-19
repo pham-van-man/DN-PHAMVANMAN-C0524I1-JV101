@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    let ngoiSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
-    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
-    let string = prompt('ngoi sao ten gi');
-    checkk(string);
+    let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    // let nameStar =
+    checkk(prompt('ngoi sao ten gi'));
 
-    function checkk(star) {
-        if (ngoiSao.indexOf(star) !== -1) {
-            alert(chomSao[ngoiSao.indexOf(star)] + ' la chom sao cua sao ' + star);
+    function checkk(starcheck) {
+        if (star.indexOf(starcheck) !== -1) {
+            alert(constellation[star.indexOf(starcheck)] + ' la chom sao cua sao ' + starcheck);
         } else {
             alert('khong co ngoi sao nay');
         }

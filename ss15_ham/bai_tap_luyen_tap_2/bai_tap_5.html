@@ -6,17 +6,27 @@
 </head>
 <body>
 <script>
-    function min(number) {
-        number.sort(function (a, b) {
-            return a - b;
-        })
-        return number[0];
+    function min(number1, number2, number3) {
+        if (number1 > number2 && number1 > number3) {
+            return number1 + ' la so lon nhat'
+        } else if (number2 > number3) {
+            return number2 + ' la so lon nhat'
+        } else {
+            return number3 + ' la so lon nhat'
+        }
     }
-    let arrNumber = [];
-    for (let i = 0; i < 5; i++) {
-        arrNumber[i] = +prompt('nhap vao so thu ' + i);
-    }
-    let result = min(arrNumber);
+
+    //     number.sort(function (a, b) {
+    //         return a - b;
+    //     })
+    //     return number[0];
+    // }
+
+    // let arrNumber = [];
+    // for (let i = 0; i < 3; i++) {
+    //     arrNumber[i] = +prompt('nhap vao so thu ' + i);
+    // }
+    let result = min(+prompt('nhap vao so thu nhat'), +prompt('nhap vao so thu hai'), +prompt('nhap vao so thu ba'));
     document.write(result);
 </script>
 </body>

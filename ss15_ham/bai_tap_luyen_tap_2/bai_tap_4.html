@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-    function check(number) {
-        let result;
-        if (Number.isInteger(number)) {
-            result = true;
+    function check(characters) {
+        // let result;
+        if (isNaN(characters)) {
+            return false;
         } else {
-            result = false;
+            return true;
         }
-        return result;
+        // result;
     }
 
-    let number1 = +prompt('nhap vao mot so');
-    let result1 = check(number1);
-    document.write(result1);
+    // let number1 =
+    let result = check(+prompt('nhap vao mot ki tu'));
+    document.write(result);
 </script>
 </body>
 </html>

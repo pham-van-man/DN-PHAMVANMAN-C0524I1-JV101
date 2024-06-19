@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let string = '';
+    let vain = [];
+    for (let i = 0; i < 4; i++) {
+        arr[i] = +prompt();
+    }
+    for (let i = 0; i < arr.length; i++) {
+        string = arr[i].toString();
+        if (string[0] < string[1]) {
+            vain.push(string);
+        }
+    }
+    document.write(vain);
+</script>
+</body>
+</html>

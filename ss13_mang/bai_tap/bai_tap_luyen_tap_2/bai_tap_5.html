@@ -8,14 +8,19 @@
 <script>
     let stringA = prompt('nhap vao chuoi a');
     let stringB = prompt('nhap vao chuoi b');
-    let count = 0;
-    for (let i = 0; i < stringA.length; i++) {
-        if (!(stringA[i] == stringB[i])) {
-            count++
-            break;
-        }
-    }
-    if (count === 0) {
+    // let count = 0;
+    // for (let i = 0; i < stringA.length; i++) {
+    //     if (!(stringA[i] == stringB[i])) {
+    //         count++
+    //         break;
+    //     }
+    // }
+    // if (count === 0) {
+    //     document.write('hai chuoi giong nhau');
+    // } else {
+    //     document.write('hia chuoi khac nhau');
+    // }
+    if (stringA === stringB) {
         document.write('hai chuoi giong nhau');
     } else {
         document.write('hia chuoi khac nhau');

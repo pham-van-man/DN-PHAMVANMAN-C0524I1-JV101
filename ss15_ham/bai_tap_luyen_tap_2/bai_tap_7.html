@@ -6,22 +6,27 @@
 </head>
 <body>
 <script>
-    function reverse(arr) {
+    function reverse(integer) {
         /*  arr.reverse();
           return arr;*/
-        let result;
-        result = arr[0];
-        arr[0] = arr[1];
-        arr[1] = result;
-        return arr;
+        // let result1;
+        // result1 = arr[0];
+        // arr[0] = arr[1];
+        // arr[1] = result1;
+        // return arr;
+        let result = [];
+        for (let i = 0; i < integer.length; i++) {
+            result[i] = integer[i];
+        }
+        return result.reverse();
     }
 
-    let arr1 = [];
-    for (let i = 0; i < 2; i++) {
-        arr1[i] = +prompt('nhap vao so thu ' + i);
-    }
-    let result1 = reverse(arr1);
-    document.write(result1);
+    // let arr1 = [];
+    // for (let i = 0; i < 2; i++) {
+    //     arr1[i] = +prompt('nhap vao so thu ' + i);
+    // }
+    let result = reverse(+prompt('nhap vao 2 so nguyen'));
+    document.write(result.join(''));
 </script>
 </body>
 </html>
