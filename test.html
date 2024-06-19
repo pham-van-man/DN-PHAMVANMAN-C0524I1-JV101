@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Rectangle Example</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
+<!--<h1>Rectangle Example</h1>-->
+<!--<canvas id="myCanvas" width="400" height="400"></canvas>-->
+<!--<div id="info"></div>-->
 <script>
-
+    // class Rectangle {
+    //     constructor(length, width) {
+    //         this.length = length;
+    //         this.width = width;
+    //     }
+    //
+    //     // Tính diện tích
+    //     getArea() {
+    //         return this.length * this.width;
+    //     }
+    //
+    //     // Tính chu vi
+    //     getPerimeter() {
+    //         return 2 * (this.length + this.width);
+    //     }
+    //
+    //     // Hiển thị trực quan hình chữ nhật trên canvas
+    //     draw(canvasId) {
+    //         const canvas = document.getElementById(canvasId);
+    //         if (canvas.getContext) {
+    //             const ctx = canvas.getContext('2d');
+    //             ctx.clearRect(0, 0, canvas.width, canvas.height); // Xóa canvas
+    //             ctx.fillStyle = 'blue'; // Màu của hình chữ nhật
+    //             ctx.fillRect(10, 10, this.width, this.length); // Vẽ hình chữ nhật
+    //         } else {
+    //             console.error("Canvas không được hỗ trợ trong trình duyệt này.");
+    //         }
+    //     }
+    //
+    //     // Cập nhật chiều dài
+    //     setLength(newLength) {
+    //         this.length = newLength;
+    //     }
+    //
+    //     // Cập nhật chiều rộng
+    //     setWidth(newWidth) {
+    //         this.width = newWidth;
+    //     }
+    // }
+    // // Khởi tạo đối tượng Rectangle
+    // const rect = new Rectangle(100, 200);
+    //
+    // // Hiển thị hình chữ nhật trên canvas
+    // rect.draw('myCanvas');
+    //
+    // // Thay đổi chiều dài và chiều rộng của hình chữ nhật
+    // rect.setLength(150);
+    // rect.setWidth(250);
+    //
+    // // Hiển thị lại hình chữ nhật với kích thước mới
+    // rect.draw('myCanvas');
+    //
+    // // In diện tích và chu vi ra màn hình
+    // const infoDiv = document.getElementById('info');
+    // infoDiv.innerHTML = `
+    //         <p>Chiều dài: ${rect.length}</p>
+    //         <p>Chiều rộng: ${rect.width}</p>
+    //         <p>Diện tích: ${rect.getArea()}</p>
+    //         <p>Chu vi: ${rect.getPerimeter()}</p>
+    //     `;
 </script>
 </body>
 </html>

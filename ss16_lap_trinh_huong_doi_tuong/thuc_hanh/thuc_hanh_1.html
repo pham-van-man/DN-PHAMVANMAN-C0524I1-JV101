@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Xây dựng lớp MyDate với phương thức khởi tạo có 3 tham số truyền vào
+    class MyDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getDay() {
+            return this.day;
+        }
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year;
+        }
+        setDay(day) {
+            this.day = day;
+        }
+        setMonth(month) {
+            this.month = month;
+        }
+        setYear(year) {
+            this.year = year;
+        }
+        setDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        toString() {
+            return this.day + '/' + this.month + '/' + this.year;
+        }
+
+    }
+
+    // let MyDate = function (day, month, year) {
+    //     this.day = day;
+    //     this.month = month;
+    //     this.year = year;
+    //     // Xây dựng phương thức trả về ngày, tháng, năm
+    //     this.getDay = function () {
+    //         return this.day;
+    //     }
+    //     this.getMonth = function () {
+    //         return this.month;
+    //     }
+    //     this.getYear = function () {
+    //         return this.year;
+    //     }
+    //     // Xây dựng phương thức thiết đặt lại giá trị các thuộc tính day, month, year
+    //     this.setDay = function (day) {
+    //         this.day = day;
+    //     }
+    //     this.setMonth = function (month) {
+    //         this.month = month;
+    //     }
+    //     this.setYear = function (year) {
+    //         this.year = year;
+    //     }
+    //     // phương thức setDate() để thiết đặt lại ngày, tháng, năm cho đối tượng MyDate
+    //     this.setDate = function (day, month, year) {
+    //         this.day = day;
+    //         this.month = month;
+    //         this.year = year;
+    //     }
+    //     // phương thức toString() để trả về chuỗi ngày tháng năm theo định dạng dd/mm/yyyy
+    //     this.toString = function () {
+    //         return this.day + '/' + this.month + '/' + this.year;
+    //     }
+    // }
+    // Sử dụng lớp vừa tạo. Tạo đối tượng date với ngày:2, tháng:2, năm: 2007
+    let date = new MyDate(2, 2, 2007);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+    // Gọi phương thức để thay đổi ngày, tháng, năm của đối tượng date vừa tạo ra thành ngày mùng 10/10/2019 sau đó hiển thị lại
+    // date.setDay(10);
+    // date.setMonth(10);
+    // date.setYear(2019);
+    // Truy cập phương thức của lớp date như sau
+    // Hiển thị ngày, tháng, năm
+    // Gọi phương thức để thay đổi ngày, tháng, năm của đối tượng date
+    date.setDate(19, 6, 2024);
+    day = date.getDay();
+    month = date.getMonth();
+    year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+    // // let string = date.toString();
+    // alert(date.toString());
+</script>
+</body>
+</html>

@@ -6,11 +6,22 @@
 </head>
 <body>
 <script>
-    let sting = prompt('nhap vao mot chuoi');
-    let count = 1;
-    for (let i = 0; i < sting.length; i++) {
-        if (sting[i] === " ") {
-            count++;
+    let string = prompt('nhap vao mot chuoi');
+    let arr = [];
+    let text = '';
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] !== ' ') {
+            text += string[i];
+        } else {
+            arr.push(text);
+            text = '';
+        }
+    }
+    arr.push(text);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== '') {
+            count++
         }
     }
     document.write('trong chuoi co ' + count + ' tu');

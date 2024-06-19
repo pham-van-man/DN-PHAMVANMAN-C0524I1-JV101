@@ -6,16 +6,16 @@
 </head>
 <body>
 <script>
-    let integer = [654, 5464, 564, 654, 847, 654, 486, 6854968, 84864];
-    let max = integer[0];
-    let average = parseInt(integer[0]);
-    for (let i = 1; i < integer.length; i++) {
-        average += parseInt(integer[i]);
-        if (integer[i] > max) {
-            max = integer[i];
+    let arrInteger = [654, 5464, 564, 654, 847, 654, 486, 6854968, 84864];
+    let max = arrInteger[0];
+    let average = parseInt(arrInteger[0]);
+    for (let i = 1; i < arrInteger.length; i++) {
+        average += parseInt(arrInteger[i]);
+        if (arrInteger[i] > max) {
+            max = arrInteger[i];
         }
     }
-    document.write(' so lon nhat la ' + max + ' tong gia tri trung binh trong mang la ' + parseInt(average / integer.length))
+    document.write(' so lon nhat la ' + max + ' tong gia tri trung binh trong mang la ' + parseInt(average / arrInteger.length));
 </script>
 </body>
 </html>

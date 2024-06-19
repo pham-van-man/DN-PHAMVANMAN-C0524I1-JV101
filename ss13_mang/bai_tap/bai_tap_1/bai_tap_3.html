@@ -22,20 +22,20 @@
     }
     document.write(dictionary.join(''));*/
     let string = prompt();
-    let engLish = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-    let vietnamese = 'qwertyuiopasdfghjklzxcvbnm';
-    let dictionary = [];
+    let upper = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    let lower = 'qwertyuiopasdfghjklzxcvbnm';
+    let result = [];
     for (let i = 0; i < string.length; i++) {
-        if (engLish.indexOf(string[i]) !== -1) {
-            dictionary.push(vietnamese[engLish.indexOf(string[i])]);
+        if (upper.indexOf(string[i]) !== -1) {
+            result.push(lower[upper.indexOf(string[i])]);
         }
-        if (vietnamese.indexOf(string[i]) !== -1) {
-            dictionary.push(engLish[vietnamese.indexOf(string[i])]);
+        if (lower.indexOf(string[i]) !== -1) {
+            result.push(upper[lower.indexOf(string[i])]);
         }else {
-            dictionary.push(string[i])
+            result.push(string[i])
         }
     }
-    document.write(dictionary.join(''));
+    document.write(result.join(''));
 </script>
 </body>
 </html>

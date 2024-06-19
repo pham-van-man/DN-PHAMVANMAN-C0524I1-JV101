@@ -6,21 +6,21 @@
 </head>
 <body>
 <script>
-    let integer = [];
+    let arrInteger = [];
     let min;
     for (let i = 0; i < 10; i++) {
-        integer.push(prompt('nhap vao so thu ' + i));
+        arrInteger.push(+prompt('nhap vao so thu ' + i));
     }
-    for (let i = 0; i < integer.length; i++) {
-        for (let j = 0; j < integer.length; j++) {
-            if (parseInt(integer[i]) > parseInt(integer[j])) {
-                min = integer[j];
-                integer[j] = integer[i];
-                integer[i] = min;
+    for (let i = 0; i < arrInteger.length; i++) {
+        for (let j = 0; j < arrInteger.length; j++) {
+            if (arrInteger[i] > arrInteger[j]) {
+                min = arrInteger[j];
+                arrInteger[j] = arrInteger[i];
+                arrInteger[i] = min;
             }
         }
     }
-    document.write(integer);
+    document.write(arrInteger);
 </script>
 </body>
 </html>
