@@ -5,31 +5,47 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="hinhChuNhat" width="500" height="500" style="border:1px solid #000000">
+<canvas id="canva" width="500" height="500" style="border:1px solid #000000">
 </canvas>
+<p id="display"> diện tích: <span id="resultArea"></span><br>
+    chu vi: <span id="resultPerimeter"></span></p>
 <script>
-    class rectangle {
+    class Rectangle {
         constructor(width, height) {
             this.width = width;
             this.height = height;
         }
 
-        getDienTich() {
-            return width * heith;
+        setWidth(setWidth) {
+            this.width = setWidth;
         }
 
-        getChuVi() {
-            return (width + heith) * 2;
+        setHeight(setHeight) {
+            this.height = setHeight;
         }
 
-        daw() {
-            let daw = document.getElementById("hinhChuNhat").getContext('2d');
-            daw.strokeRect(50, 50, 100, 100);
+        getAcreage() {
+            return this.width * this.height;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+        daw(idCanva) {
+            let daw = document.getElementById(idCanva).getContext('2d');
+            daw.strokeRect(10, 10, this.width, this.height);
         }
     }
 
-    let rectangle1 = new rectangle();
-    rectangle1.daw();
+    let rectangle = new Rectangle(400, 200);
+    rectangle.daw('canva');
+    rectangle.setWidth(600);
+    rectangle.setHeight(200);
+    let area = rectangle.getAcreage();
+    let perimeter = rectangle.getPerimeter();
+    document.getElementById('resultArea').innerHTML = area + 'cm' + '<sup>2</sup>';
+    document.getElementById('resultPerimeter').innerHTML = perimeter + 'cm';
 </script>
 </body>
 </html>
