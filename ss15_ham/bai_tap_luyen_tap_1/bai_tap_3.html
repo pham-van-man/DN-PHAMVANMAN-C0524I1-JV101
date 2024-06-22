@@ -8,15 +8,15 @@
 <script>
     function sum(numberA, numberB) {
         if (numberA > numberB) {
-            return alert('so thu nhat lon hon so thu hai');
+            alert('so thu nhat lon hon so thu hai');
+            return;
         }
         if (numberA <= numberB) {
-            return numberA + numberB;
+            return document.write(numberA + numberB);
         }
     }
 
-    let result = sum(6, 5);
-    document.write(result);
+    sum(5, 6);
 </script>
 </body>
 </html>

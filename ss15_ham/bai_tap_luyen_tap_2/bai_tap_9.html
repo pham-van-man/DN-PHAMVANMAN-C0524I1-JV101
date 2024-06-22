@@ -6,33 +6,22 @@
 </head>
 <body>
 <script>
-    function createArray(arr2) {
-        let arr3 = [];
-        for (let i = 0; i < arr2.length; i++) {
-            arr3[i] = arr2[i];
-        }
-        return arr3
-    }
-
-    function check(character) {
-        let count = 0;
-        for (let i = 0; i < arr.length; i++) {
-            if (character === arr[i]) {
-                count++;
+    function checkCharacterInArray(character) {
+        if (array.indexOf(character) !== -1) {
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (character === array[i]) {
+                    count++;
+                }
             }
-        }
-        if (count === 0) {
-            return -1;
-        } else {
             return count;
+        } else {
+            return -1;
         }
     }
 
-    // let arr1 =
-    let arr = createArray(prompt('nhap vao mot chuoi'));
-    // let character =
-    let result = check(prompt('nhap vao ki tu ban muon kiem tra'));
-    document.write(result);
+    let array = ['q', 'w', 'e', 'r', 't'];
+    console.log(checkCharacterInArray('q'));
 </script>
 </body>
 </html>

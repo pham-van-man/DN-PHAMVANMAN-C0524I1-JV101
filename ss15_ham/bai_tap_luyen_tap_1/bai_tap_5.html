@@ -8,12 +8,11 @@
 <script>
     let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
     let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
-    // let nameStar =
-    checkk(prompt('ngoi sao ten gi'));
+    check(prompt('ngoi sao ten gi'));
 
-    function checkk(starcheck) {
+    function check(starcheck) {
         if (star.indexOf(starcheck) !== -1) {
-            alert(constellation[star.indexOf(starcheck)] + ' la chom sao cua sao ' + starcheck);
+            alert(starcheck + ' thuoc chom sao ' + constellation[star.indexOf(starcheck)]);
         } else {
             alert('khong co ngoi sao nay');
         }

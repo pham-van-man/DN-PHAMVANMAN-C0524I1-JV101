@@ -6,17 +6,16 @@
 </head>
 <body>
 <script>
-    function reverse(arr) {
-        let arr1=[];
-        for (let i = 0; i < arr.length; i++) {
-            arr1.push(arr[(arr.length - 1) - i])
+    function reverseArray(array) {
+        let arrayIsReverse = [];
+        for (let i = 0; i < array.length; i++) {
+            arrayIsReverse.push(array[(array.length - 1) - i])
         }
-        return arr1;
+        return arrayIsReverse;
     }
 
-    // let arr2 = ;
-    let result = reverse(prompt('nhap vao mot chuoi so nguyen'));
-    document.write(result.join(''));
+    let arrayInteger = [1, 2, 3];
+    console.log(reverseArray(arrayInteger));
 </script>
 </body>
 </html>

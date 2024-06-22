@@ -6,19 +6,15 @@
 </head>
 <body>
 <script>
-    function check(characters) {
-        // let result;
+    function checkIsNumber(characters) {
         if (isNaN(characters)) {
             return false;
         } else {
             return true;
         }
-        // result;
     }
 
-    // let number1 =
-    let result = check(+prompt('nhap vao mot ki tu'));
-    document.write(result);
+    console.log(checkIsNumber(5));
 </script>
 </body>
 </html>

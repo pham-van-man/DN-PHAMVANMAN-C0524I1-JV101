@@ -6,27 +6,16 @@
 </head>
 <body>
 <script>
-    function reverse(integer) {
-        /*  arr.reverse();
-          return arr;*/
-        // let result1;
-        // result1 = arr[0];
-        // arr[0] = arr[1];
-        // arr[1] = result1;
-        // return arr;
+    function reverseTwoNumber(integer) {
+        integer += ''
         let result = [];
         for (let i = 0; i < integer.length; i++) {
-            result[i] = integer[i];
+            result[i] = integer[(integer.length - 1) - i];
         }
-        return result.reverse();
+        return result.join('');
     }
 
-    // let arr1 = [];
-    // for (let i = 0; i < 2; i++) {
-    //     arr1[i] = +prompt('nhap vao so thu ' + i);
-    // }
-    let result = reverse(+prompt('nhap vao 2 so nguyen'));
-    document.write(result.join(''));
+    console.log(reverseTwoNumber(23));
 </script>
 </body>
 </html>

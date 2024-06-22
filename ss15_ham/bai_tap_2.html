@@ -5,22 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-<input placeholder="feet" id="feet" oninput="feetToMeter()">
-<p id="resultMeter"></p>
-<input placeholder="meter" id="meter" oninput="meterToFeet()">
-<p id="resultFeet"></p>
 <script>
-    function feetToMeter() {
-        let feet = document.getElementById('feet').value;
+    function feetToMeter(feet) {
         let result = 0.305 * feet;
-        return document.getElementById('resultMeter').innerHTML = feet + '=' + result;
+        return result;
     }
 
-    function meterToFeet() {
-        let meter = document.getElementById('meter').value;
+    function meterToFeet(meter) {
         let result = 3.279 * meter;
-        return document.getElementById('resultFeet').innerHTML = meter + '=' + result;
+        return result;
     }
+
+    console.log(feetToMeter(10));
+    console.log(meterToFeet(10));
 </script>
 </body>
 </html>

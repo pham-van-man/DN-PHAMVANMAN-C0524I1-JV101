@@ -6,21 +6,16 @@
 </head>
 <body>
 <script>
-    function area(number) {
-        number = Math.PI * number ** 2;
-        return number
+    function calculateCircularCharge(radius) {
+        return Math.PI * radius ** 2;
     }
 
-    function circumferenceCalculation(number) {
-        number = 2 * Math.PI * number;
-        return number;
+    function CalculateTheCircumferenceCircle(radius) {
+        return 2 * Math.PI * radius;
     }
 
-    let number = +prompt('nhap vao ban kinh duong tron');
-    let resultArea = area(number);
-    let resultCircumference = circumferenceCalculation(number);
-    document.write('dien tich hinh tron bang ' + parseInt(resultArea) + '<br>');
-    document.write('chu vi hinh tron bang ' + parseInt(resultCircumference))
+    console.log(calculateCircularCharge(5));
+    console.log(CalculateTheCircumferenceCircle(5));
 </script>
 </body>
 </html>

@@ -20,22 +20,26 @@ function displayProduct() {
 
 function AddNewProduct() {
     let newProduct = document.getElementById("newProduct").value;
+    if (newProduct === '') {
+        return;
+    }
     listProduct.push(newProduct);
     displayProduct();
     document.getElementById('numberProduct').innerHTML = listProduct.length;
+    document.getElementById("newProduct").value = '';
 }
 
-function deletee(name) {
+function deletee(product) {
     if (confirm('muon xoa that khong')) {
-        listProduct.splice(listProduct.indexOf(name), 1);
+        listProduct.splice(listProduct.indexOf(product), 1);
     }
     displayProduct();
 }
 
-function editt(value) {
+function editt(product) {
     let newName = prompt();
     if (newName !== null && newName !== '') {
-        listProduct[value] = newName;
+        listProduct[product] = newName;
     }
     displayProduct();
 }

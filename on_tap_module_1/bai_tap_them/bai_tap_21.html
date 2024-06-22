@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function changeBinary(num) {
+        if (num === 0) {
+            return "0";
+        }
+        let binaryRepresentation = "";
+        while (num > 0) {
+            let remainder = num % 2;
+            binaryRepresentation = remainder + binaryRepresentation;
+            num = Math.floor(num / 2);
+        }
+        return binaryRepresentation;
+    }
+    console.log(changeBinary(8));
+    console.log(changeBinary(255));
+</script>
+</body>
+</html>
