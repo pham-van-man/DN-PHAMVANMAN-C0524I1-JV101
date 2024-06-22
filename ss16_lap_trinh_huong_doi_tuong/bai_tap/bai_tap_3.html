@@ -6,11 +6,131 @@
 </head>
 <body>
 <script>
-    class Mobile{
+    class Mobile {
         constructor() {
+            this.battery = 100;
+            this.draftedMessage = '';
+            this.inbox = [];
+            this.sentMessage = [];
+            this.statusOnOff = false;
+        }
+
+        viewStatusOnOff() {
+            return this.statusOnOff;
+        }
+
+        onPhone() {
+            if (this.battery < 15) {
+                alert('pin yeu');
+            }
+            return this.statusOnOff = true;
+        }
+
+        offPhone() {
+            return this.statusOnOff = false;
+        }
+
+        viewBattery() {
+            if (this.statusOnOff) {
+                return this.battery;
+            }
+        }
+
+        charge() {
+            if (battery < 100) {
+                alert('dang sac pin');
+            }
+            while (this.battery < 100) {
+                this.battery++;
+            }
+            if (battery === 100) {
+                alert('pin day');
+            }
+        }
+
+        composeMessage(texting) {
+            this.battery--;
+            if (this.statusOnOff && this.battery > 0) {
+                if (this.battery < 15) {
+                    alert('pin yeu');
+                }
+                this.draftedMessage = texting;
+            }
+
+        }
+
+        receiveMessages(message) {
+            if (this.battery > 0) {
+                this.inbox.push(message);
+            }
+        }
+
+        sendMessage(otherPhone) {
+            if (this.draftedMessage && this.statusOnOff && this.battery > 0) {
+                this.battery--;
+                if (this.battery < 15) {
+                    alert('pin yeu');
+                }
+                otherPhone.receiveMessages(this.draftedMessage);
+                this.sentMessage.push(this.draftedMessage);
+                this.draftedMessage = '';
+            }
+        }
+
+        viewInBox() {
+            if (this.battery > 0 && this.statusOnOff) {
+                this.battery--;
+                if (this.battery < 15) {
+                    alert('pin yeu');
+                }
+                if (this.inbox.length > 0) {
+                    return this.inbox;
+                } else {
+                    alert('khong co tin nhan nao')
+                }
+            }
+
+        }
+
+        viewSentMessage() {
+            if (this.battery > 0 && this.statusOnOff) {
+                this.battery--;
+                if (this.battery < 15) {
+                    alert('pin yeu');
+                }
+                if (this.sentMessage.length > 0) {
+                    return this.sentMessage;
+                } else {
+                    alert('khong co tin nhan nao')
+                }
+            }
+
 
         }
     }
+
+    let nokia = new Mobile();
+    let iphone = new Mobile();
+    if (!(nokia.viewStatusOnOff())) {
+        nokia.onPhone();
+    }
+    let battery = nokia.viewBattery()
+    if (battery < 0) {
+        nokia.charge();
+    }
+    nokia.composeMessage('iphone cui bap');
+    nokia.sendMessage(iphone);
+    if (!(iphone.viewStatusOnOff())) {
+        iphone.onPhone();
+    }
+    battery = iphone.viewBattery()
+    if (battery < 0) {
+        iphone.charge();
+    }
+    console.log(iphone.viewInBox());
+    console.log(nokia.viewSentMessage());
+    console.log(nokia.viewBattery());
+    console.log(iphone.viewBattery());
 </script>
 </body>
 </html>
