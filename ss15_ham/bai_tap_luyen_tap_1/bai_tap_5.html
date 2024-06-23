@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
-    let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
-    check(prompt('ngoi sao ten gi'));
-
     function check(starcheck) {
+        let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
         if (star.indexOf(starcheck) !== -1) {
             alert(starcheck + ' thuoc chom sao ' + constellation[star.indexOf(starcheck)]);
         } else {
             alert('khong co ngoi sao nay');
         }
     }
+
+    check(prompt('ngoi sao ten gi'));
 </script>
 </body>
 </html>
