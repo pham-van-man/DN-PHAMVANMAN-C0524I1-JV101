@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <form>
+        <h1>Add New Product</h1>
+        <input id="newProduct" placeholder="new product" type="text">
+        <input type="button" value="add" onclick="addNewProduct()">
+        <h1>All Product</h1>
+        <table>
+            <tr>
+                <th><p>Product Name</p></th>
+                <th>
+                    <p><span id="numberProduct"></span> Products</p>
+                </th>
+            </tr>
+        </table>
+        <table id="listProduct">
+        </table>
+    </form>
+</center>
+<script>
+    class Product {
+        constructor(listProduct) {
+            this.listProduct = listProduct;
+        }
+
+        displayProduct() {
+            let tableString = `<tr>
+                                    <th>STT</th>
+                                    <th>Name</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                               </tr>                                   `;
+            for (let i = 0; i < this.listProduct.length; i++) {
+                tableString += `<tr>
+                                    <td>${i + 1}</td>
+                                    <td>${this.listProduct[i]}</td>
+                                    <td><button onclick="editt(this.id)" id="${i}">Edit</button></td>
+                                    <td><button onclick="deletee(this.id)" id="${this.listProduct[i]}">Delete</button></td>
+                                </tr>`
+            }
+            document.getElementById("listProduct").innerHTML = tableString;
+            document.getElementById('numberProduct').innerHTML = this.listProduct.length;
+            document.getElementById("newProduct").value = '';
+        }
+
+        addNewProduct() {
+            let newProduct = document.getElementById("newProduct").value;
+            if (newProduct === '') {
+                return;
+            }
+            this.listProduct.push(newProduct);
+        }
+
+        deletee(product) {
+            if (confirm('muon xoa that khong')) {
+                this.listProduct.splice(this.listProduct.indexOf(product), 1);
+            }
+        }
+
+        editt(product) {
+            let newName = prompt();
+            if (newName !== null && newName !== '') {
+                this.listProduct[product] = newName;
+            }
+        }
+    }
+
+    let listProduct = ['Samsung', 'Xiao Mi'];
+    let productNew = new Product(listProduct);
+    productNew.displayProduct();
+
+    function addNewProduct() {
+        productNew.addNewProduct();
+        productNew.displayProduct();
+    }
+
+    function deletee(product) {
+        productNew.deletee(product);
+        productNew.displayProduct();
+    }
+
+    function editt(product) {
+        productNew.editt(product);
+        productNew.displayProduct();
+    }
+</script>
+</body>
+</html>

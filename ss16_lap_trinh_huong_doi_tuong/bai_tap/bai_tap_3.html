@@ -127,6 +127,8 @@
     if (battery < 0) {
         iphone.charge();
     }
+    nokia.offPhone();
+    iphone.offPhone();
     console.log(iphone.viewInBox());
     console.log(nokia.viewSentMessage());
     console.log(nokia.viewBattery());

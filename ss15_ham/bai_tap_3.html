@@ -32,13 +32,15 @@
 <th>STT</th>
 <th>Name</th>
 <th>Edit</th>
-<th>Delete</th></tr>`;
+<th>Delete</th>
+</tr>`;
         for (let i = 0; i < listProduct.length; i++) {
             tableString += `<tr>
 <td>${i + 1}</td>
 <td>${listProduct[i]}</td>
 <td><button onclick="editt(this.id)" id="${i}">Edit</button></td>
-<td><button onclick="deletee(this.id)" id="${listProduct[i]}">Delete</button></td></tr>`
+<td><button onclick="deletee(this.id)" id="${listProduct[i]}">Delete</button></td>
+</tr>`
         }
         document.getElementById("listProduct").innerHTML = tableString;
         document.getElementById('numberProduct').innerHTML = listProduct.length;

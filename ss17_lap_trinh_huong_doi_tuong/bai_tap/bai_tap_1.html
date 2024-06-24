@@ -23,13 +23,38 @@
             this.left += 200;
         }
 
+        moveLeft() {
+            this.left -= 200;
+        }
+
+        moveTop() {
+            this.top -= 200;
+        }
+
+        moveDown() {
+            this.top += 200;
+        }
+
     }
 
     let hero = new Hero('pikachu.png', 20, 30, 200);
     document.getElementById('game').innerHTML = hero.inForHero();
 
-    function start() {
-        hero.moveRight();
+    function start(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                hero.moveLeft();
+                break;
+            case 39:
+                hero.moveRight();
+                break;
+            case 38:
+                hero.moveTop();
+                break;
+            case 40:
+                hero.moveDown();
+                break;
+        }
         document.getElementById('game').innerHTML = hero.inForHero();
     }
 

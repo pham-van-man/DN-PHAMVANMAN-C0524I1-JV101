@@ -7,8 +7,7 @@
 </head>
 <body>
 <button onclick="start()">Start</button>
-<div id="game-board">
-</div>
+<div id="game-board"></div>
 <script>
     const VALUE_EMPTY = 1;
     const VALUE_X = 2;
@@ -24,14 +23,9 @@
         this.getHtml = function () {
             var top = x * DEFAULT_CELL_SIZE;
             var left = y * DEFAULT_CELL_SIZE;
-            var cellHtml = '<div id="cell-' + x + '-' + y + '" onclick="play(' + x + ',' + y + ')" class="cell" style="position: absolute; width: ' +
-                DEFAULT_CELL_SIZE + 'px; height:' +
-                DEFAULT_CELL_SIZE + 'px; left:' +
-                left + 'px; top:' +
-                top + 'px; line-height: ' +
-                DEFAULT_CELL_SIZE + 'px;"></div>';
+            var cellHtml = `<div id="cell-${x}-${y}" onclick="play(${x}, ${y})" class="cell" style="position: absolute; width:${DEFAULT_CELL_SIZE}px; height:${DEFAULT_CELL_SIZE}px; left:${left}px; top:${top}px; line-height:${DEFAULT_CELL_SIZE}px"></div>`;
             return cellHtml;
-        };
+        }
 
         this.draw = function () {
             var cellDiv = document.getElementById("cell-" + x + "-" + y);
@@ -69,7 +63,7 @@
                     gameBoardDiv.innerHTML += cell.getHtml();
                 }
             }
-        };
+        }
 
         this.play = function (x, y) {
             if (this.isOver) {
@@ -88,11 +82,10 @@
             } else {
                 alert("Cell is not empty");
             }
-        };
+        }
 
         this.check = function (x, y) {
             var cell = this.cells[x][y];
-            //Horizontal
             var count = 1;
             var i = 1;
             while ((y + i < this.cols) && this.cells[x][y + i].value === cell.value) {
@@ -105,7 +98,6 @@
                 i++;
             }
             this.endGame(count);
-            //Vertical
             var count = 1;
             var i = 1;
             while ((x + i < this.rows) && this.cells[x + i][y].value === cell.value) {
@@ -118,7 +110,6 @@
                 i++;
             }
             this.endGame(count);
-            //Left diagonal
             var count = 1;
             var i = 1;
             var j = 1;
@@ -135,7 +126,6 @@
                 j++;
             }
             this.endGame(count);
-            //Right diagonal
             var count = 1;
             var i = 1;
             var j = 1;
@@ -152,14 +142,14 @@
                 j++;
             }
             this.endGame(count);
-        };
+        }
 
         this.endGame = function (count) {
             if (count >= 5) {
                 this.isOver = true;
                 alert("You won!!!");
             }
-        };
+        }
     }
 
     function play(x, y) {
