@@ -8,7 +8,9 @@
 <center>
     <form>
         <h1>Add New Product</h1>
-        <input id="newProduct" placeholder="new product" type="text">
+        <input id="newId" placeholder="new id" type="text">
+        <input id="newName" placeholder="new name" type="text">
+        <input id="newPrice" placeholder="new price" type="text">
         <input type="button" value="add" onclick="addNewProduct()">
         <h1>All Product</h1>
         <table>
@@ -25,69 +27,68 @@
 </center>
 <script>
     class Product {
-        constructor(listProduct) {
-            this.listProduct = listProduct;
-        }
-
-        displayProduct() {
-            let tableString = `<tr>
-                                    <th>STT</th>
-                                    <th>Name</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
-                               </tr>                                   `;
-            for (let i = 0; i < this.listProduct.length; i++) {
-                tableString += `<tr>
-                                    <td>${i + 1}</td>
-                                    <td>${this.listProduct[i]}</td>
-                                    <td><button onclick="editt(this.id)" id="${i}">Edit</button></td>
-                                    <td><button onclick="deletee(this.id)" id="${this.listProduct[i]}">Delete</button></td>
-                                </tr>`
-            }
-            document.getElementById("listProduct").innerHTML = tableString;
-            document.getElementById('numberProduct').innerHTML = this.listProduct.length;
-            document.getElementById("newProduct").value = '';
-        }
-
-        addNewProduct() {
-            let newProduct = document.getElementById("newProduct").value;
-            if (newProduct === '') {
-                return;
-            }
-            this.listProduct.push(newProduct);
-        }
-
-        deletee(product) {
-            if (confirm('muon xoa that khong')) {
-                this.listProduct.splice(this.listProduct.indexOf(product), 1);
-            }
-        }
-
-        editt(product) {
-            let newName = prompt();
-            if (newName !== null && newName !== '') {
-                this.listProduct[product] = newName;
-            }
+        constructor(id, name, price) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
         }
     }
 
-    let listProduct = ['Samsung', 'Xiao Mi'];
-    let productNew = new Product(listProduct);
-    productNew.displayProduct();
+    let listProduct = [
+        new Product(1, 'samsung', 100),
+        new Product(2, 'iphone', 100),
+        new Product(3, 'xiaochaomeng', 100)
+    ];
+    displayProduct();
+
+    function displayProduct() {
+        let tableString = `<tr>
+                                <th>STT</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>PRICE</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                           </tr>`;
+        for (let i = 0; i < listProduct.length; i++) {
+            tableString += `<tr>
+                                <td>${i + 1}</td>
+                                <td>${listProduct[i].id}</td>
+                                <td>${listProduct[i].name}</td>
+                                <td>${listProduct[i].price}</td>
+                                <td><button onclick="editt(${i})">Edit</button></td>
+                                <td><button onclick="deletee(${i})">Delete</button></td>
+                            </tr>`
+        }
+        document.getElementById("listProduct").innerHTML = tableString;
+        document.getElementById('numberProduct').innerHTML = listProduct.length;
+    }
 
     function addNewProduct() {
-        productNew.addNewProduct();
-        productNew.displayProduct();
+        let newId = document.getElementById('newId').value;
+        let newName = document.getElementById('newName').value;
+        let newPrice = document.getElementById('newPrice').value;
+        let newProduct = new Product(newId, newName, newPrice);
+        listProduct.push(newProduct);
+        displayProduct();
+        document.getElementById('numberProduct').innerHTML = listProduct.length;
+        document.getElementById("newProduct").value = '';
     }
 
-    function deletee(product) {
-        productNew.deletee(product);
-        productNew.displayProduct();
+    function editt(i) {
+        let newId = prompt("nhap id moi");
+        let newName = prompt("nhap ten moi");
+        let newPrice = prompt("nhap gia moi");
+        let editProduct = new Product(newId, newName, newPrice);
+        listProduct.splice(i, 1, editProduct)
+        displayProduct();
     }
 
-    function editt(product) {
-        productNew.editt(product);
-        productNew.displayProduct();
+    function deletee(i) {
+        if (confirm('ban muon xoa :' + listProduct[i].name + ' that khong?')) {
+            listProduct.splice(i, 1);
+        }
+        displayProduct();
     }
 </script>
 </body>
