@@ -16,12 +16,6 @@
         <input id="search" placeholder="name product" type="text">
         <input type="button" value="search" onclick="searchh()">
         <h1>All Product</h1>
-        <table>
-            <tr>
-                <th width="150" align="left"><p>Product Name</p></th>
-                <th width="150" align="right"><p><span id="numberProduct"></span> Products</p></th>
-            </tr>
-        </table>
         <table id="listProduct">
         </table>
     </form>
@@ -69,7 +63,6 @@
                             </tr>`
         }
         document.getElementById("listProduct").innerHTML = tableString;
-        document.getElementById('numberProduct').innerHTML = listProduct.length;
     }
 
     function addNewProduct() {
@@ -78,7 +71,6 @@
         let newPrice = document.getElementById('newPrice').value;
         let newProduct = new Product(newId, newName, newPrice);
         listProduct.push(newProduct);
-        document.getElementById('numberProduct').innerHTML = listProduct.length;
         displayProduct();
         reset();
     }
