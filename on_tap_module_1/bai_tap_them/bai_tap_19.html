@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let upper = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+        let result = '';
+        for (let i = 0; i < str.length; i++) {
+            if (upper.includes(str[i])) {
+                result += str[i];
+            }
+        }
+        return result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let upper = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    let lower = 'qwertyuiopasdfghjklzxcvbnm';
+    let countUpper = 0;
+    let countLower = 0;
+
+    function checkString(str) {
+        for (let i = 0; i < str.length; i++) {
+            if (upper.includes(str[i])) {
+                countUpper++;
+            }
+            if (lower.includes(str[i])) {
+                countLower++;
+            }
+        }
+        if (countLower === countUpper) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    console.log(checkString('Pham VAN Man'))
+</script>
+</body>
+</html>

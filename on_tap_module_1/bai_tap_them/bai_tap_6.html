@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let vowel = ['u', 'e', 'o', 'a', 'i'];
+
+    function checkString(str) {
+        let result = [];
+        for (let i = 0; i < str.length; i++) {
+            if (vowel.includes(str[i])) {
+                result.push(str[i]);
+            }
+        }
+        return result;
+    }
+
+    console.log(checkString('Pham Van Man'));
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let uppercase = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    let lowercase = 'qwertyuiopasdfghjklzxcvbnm';
+    let countUppercase = 0;
+    let countLowercase = 0;
+
+    function checkString(str) {
+        for (let i = 0; i < str.length; i++) {
+            if (uppercase.includes(str[i])) {
+                countUppercase++;
+            }
+            if (lowercase.includes(str[i])) {
+                countLowercase++;
+            }
+        }
+        if (countLowercase === countUppercase) {
+            return true;
+        }
+        return false;
+    }
+
+    console.log(checkString('Pham VAN mAn'));
+</script>
+</body>
+</html>

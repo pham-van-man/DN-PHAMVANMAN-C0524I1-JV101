@@ -7,8 +7,15 @@
 <body>
 <script>
     function checkArray(array) {
-
+        for (let i = 0; i < array.length / 2; i++) {
+            if (array[i] ** 2 !== array[array.length / 2 + i]) {
+                return false;
+            }
+            return true;
+        }
     }
+
+    console.log(checkArray([1, 2, 3, 1, 4, 9]));
 </script>
 </body>
 </html>

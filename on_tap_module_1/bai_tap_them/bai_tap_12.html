@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkDate(dataString) {
+        let date = dataString.split('/');
+        if (date.length !== 3) {
+            return false;
+        }
+        let day = parseInt(date[0]);
+        let month = parseInt(date[1]);
+        let year = parseInt(date[2]);
+        if (isNaN(day) || isNaN(month) || isNaN(year)) {
+            return false;
+        }
+        if (month < 1 || month > 12 || day < 1 || day > 31) {
+            return false;
+        }
+        let date1 = new Date(month, year, 0);
+        let dayOfMonth = date1.getDate();
+        if (day > dayOfMonth) {
+            return false;
+        }
+        return true;
+    }
+
+    console.log(checkDate('01/01/2002'));
+</script>
+</body>
+</html>

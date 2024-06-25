@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 2, 3, 3, 5, 4, 4];
+    let total = 0;
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        total += array[i];
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === total / array.length) {
+            count++;
+        }
+    }
+</script>
+</body>
+</html>

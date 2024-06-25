@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkArray(str) {
+        let result = [];
+        for (let i = 0; i < str.length; i++) {
+            if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z') && (str[i] < '0' || str[i] > '9')) {
+                result.push(str[i]);
+            }
+        }
+        return result;
+    }
+
+    console.log(checkArray('qwertyuiopasdfghjklzxcvbnWERTY,./;[],./UIOASDFGHJKLZXCVBNMm,./165646651321'))
+</script>
+</body>
+</html>

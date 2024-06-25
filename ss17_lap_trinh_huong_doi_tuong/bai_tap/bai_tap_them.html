@@ -12,13 +12,12 @@
         <input id="newName" placeholder="new name" type="text">
         <input id="newPrice" placeholder="new price" type="text">
         <input type="button" value="add" onclick="addNewProduct()">
+        <input type="button" value="save" onclick="save()">
         <h1>All Product</h1>
         <table>
             <tr>
-                <th><p>Product Name</p></th>
-                <th>
-                    <p><span id="numberProduct"></span> Products</p>
-                </th>
+                <th width="150" align="left"><p>Product Name</p></th>
+                <th width="150" align="right"><p><span id="numberProduct"></span> Products</p></th>
             </tr>
         </table>
         <table id="listProduct">
@@ -32,12 +31,18 @@
             this.name = name;
             this.price = price;
         }
+
+        setProduct(id, name, price) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+        }
     }
 
     let listProduct = [
         new Product(1, 'samsung', 100),
         new Product(2, 'iphone', 100),
-        new Product(3, 'xiaochaomeng', 100)
+        new Product(3, 'xiao me', 100)
     ];
     displayProduct();
 
@@ -72,15 +77,16 @@
         listProduct.push(newProduct);
         displayProduct();
         document.getElementById('numberProduct').innerHTML = listProduct.length;
-        document.getElementById("newProduct").value = '';
+        reset();
     }
 
+    let numberArray = '';
+
     function editt(i) {
-        let newId = prompt("nhap id moi");
-        let newName = prompt("nhap ten moi");
-        let newPrice = prompt("nhap gia moi");
-        let editProduct = new Product(newId, newName, newPrice);
-        listProduct.splice(i, 1, editProduct)
+        document.getElementById('newId').value = listProduct[i].id;
+        document.getElementById('newName').value = listProduct[i].name;
+        document.getElementById('newPrice').value = listProduct[i].price;
+        numberArray = i;
         displayProduct();
     }
 
@@ -89,6 +95,22 @@
             listProduct.splice(i, 1);
         }
         displayProduct();
+    }
+
+    function reset() {
+        document.getElementById('newId').value = '';
+        document.getElementById('newName').value = '';
+        document.getElementById('newPrice').value = '';
+    }
+
+    function save() {
+        let newId = document.getElementById('newId').value;
+        let newName = document.getElementById('newName').value;
+        let newPrice = document.getElementById('newPrice').value;
+        listProduct[numberArray].setProduct(newId, newName, newPrice);
+        displayProduct();
+        reset();
+        numberArray = '';
     }
 </script>
 </body>
