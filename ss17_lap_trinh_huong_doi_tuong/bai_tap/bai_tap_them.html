@@ -13,6 +13,8 @@
         <input id="newPrice" placeholder="new price" type="text">
         <input type="button" value="add" onclick="addNewProduct()">
         <input type="button" value="save" onclick="save()">
+        <input id="search" placeholder="name product" type="text">
+        <input type="button" value="search" onclick="searchh()">
         <h1>All Product</h1>
         <table>
             <tr>
@@ -44,6 +46,7 @@
         new Product(2, 'iphone', 100),
         new Product(3, 'xiao me', 100)
     ];
+
     displayProduct();
 
     function displayProduct() {
@@ -75,8 +78,8 @@
         let newPrice = document.getElementById('newPrice').value;
         let newProduct = new Product(newId, newName, newPrice);
         listProduct.push(newProduct);
-        displayProduct();
         document.getElementById('numberProduct').innerHTML = listProduct.length;
+        displayProduct();
         reset();
     }
 
@@ -101,6 +104,7 @@
         document.getElementById('newId').value = '';
         document.getElementById('newName').value = '';
         document.getElementById('newPrice').value = '';
+        document.getElementById('search').value = '';
     }
 
     function save() {
@@ -111,6 +115,21 @@
         displayProduct();
         reset();
         numberArray = '';
+    }
+
+    function searchh() {
+        let search = document.getElementById('search').value;
+        for (let i = 0; i < listProduct.length; i++) {
+            if (listProduct[i].name === search) {
+                document.getElementById('newId').value = listProduct[i].id;
+                document.getElementById('newName').value = listProduct[i].name;
+                document.getElementById('newPrice').value = listProduct[i].price;
+                displayProduct();
+                numberArray = i;
+                return;
+            }
+        }
+        return alert('Chung toi khong co san pham nay');
     }
 </script>
 </body>
