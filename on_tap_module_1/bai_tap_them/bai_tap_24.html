@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [2, 4, 7, 9, 1];
+    let count = 0;
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 1; j <= array[i]; j++) {
+            if (!(array[i] % j)) {
+                count += j;
+            }
+        }
+        newArray.push(count);
+        count = 0;
+    }
+    console.log(newArray);
+</script>
+</body>
+</html>

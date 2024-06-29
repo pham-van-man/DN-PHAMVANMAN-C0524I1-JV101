@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bouncing_ball.css">
+</head>
+<body>
+<center>
+    <div id="bgr">
+        <div id="gameplay">
+            <canvas id="themeGame" width="1280" height="720"></canvas>
+        </div>
+        <div id="buttonStart">
+            <button id="start" onclick="start()">Start</button>
+        </div>
+        <div id="gameOver">
+            <button id="reStart" onclick="reStart()">Restart</button>
+            <div id="inForGameOver">
+                <p id="text">Scores</p>
+                <p id="scores"></p>
+            </div>
+        </div>
+    </div>
+</center>
+<script src="bouncing_ball.js"></script>
+</body>
+</html>

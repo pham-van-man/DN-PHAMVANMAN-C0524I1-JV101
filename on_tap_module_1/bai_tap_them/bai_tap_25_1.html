@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [
+        [1, 2, 3, 4],
+        [5, 1, 3, 3],
+        [2, 5, 2, 3],
+        [2, 3, 5, 1]
+    ];
+    let result = 0;
+    for (let i = 0; i < array.length; i++) {
+        result += array[i][i];
+    }
+    for (let i = 0; i < array.length; i++) {
+        result += array[i][(array.length - 1) - i];
+    }
+    console.log(result);
+</script>
+</body>
+</html>

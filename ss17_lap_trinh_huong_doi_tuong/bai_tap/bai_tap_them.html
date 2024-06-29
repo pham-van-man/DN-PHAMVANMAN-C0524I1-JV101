@@ -40,7 +40,7 @@
         new Product(2, 'iphone', 100),
         new Product(3, 'xiao me', 100)
     ];
-
+console.log(listProduct);
     displayProduct();
 
     function displayProduct() {
@@ -86,7 +86,7 @@
     }
 
     function deletee(i) {
-        if (confirm('ban muon xoa :' + listProduct[i].name + ' that khong?')) {
+        if (confirm('ban muon xoa ' + listProduct[i].name + ' that khong?')) {
             listProduct.splice(i, 1);
         }
         displayProduct();

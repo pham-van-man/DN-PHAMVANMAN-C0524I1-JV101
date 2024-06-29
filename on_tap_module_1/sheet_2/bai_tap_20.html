@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class FrequencySorter {
+        constructor(arr) {
+            this.arr = arr;
+            this.frequency = this.calculateFrequency();
+        }
+
+        calculateFrequency() {
+            const frequency = {};
+            this.arr.forEach(num => {
+                frequency[num] = (frequency[num] || 0) + 1;
+            });
+            return frequency;
+        }
+
+        sort() {
+            return this.arr.sort((a, b) => {
+                if (this.frequency[a] !== this.frequency[b]) {
+                    return this.frequency[a] - this.frequency[b];
+                }
+                return a - b;
+            }).filter((value, index, self) => self.indexOf(value) === index);
+        }
+    }
+
+    const arr = [1, 3, 4, 5, 7, 2, 3, 5];
+    const sorter = new FrequencySorter(arr);
+    const result = sorter.sort();
+    console.log(result);
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+canvas {
+    border: 1px solid cornflowerblue;
+}
+
+#gameplay {
+    display: none;
+}
+
+#start {
+    border-radius: 50px;
+    font-size: 150px;
+    background-color: #7DEB52;
+    transition: 0.2s;
+}
+
+#start:hover {
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.75);
+    background-color: #EBAF52;
+}
+
+#buttonStart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#themeGame {
+    background-image: url("istockphoto-1178574683-612x612.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#bgr {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("pngtree-red-brick-wall-real-shot-red-black-regular-old-wall-real-image_995498.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#gameOver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#reStart {
+    border-radius: 50px;
+    font-size: 150px;
+    background-color: #7DEB52;
+    transition: 0.2s;
+}
+
+#reStart:hover {
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.75);
+    background-color: #EBAF52;
+}
+
+#text {
+    font-size: 100px;
+}
+#scores{
+    font-size: 100px;
+}

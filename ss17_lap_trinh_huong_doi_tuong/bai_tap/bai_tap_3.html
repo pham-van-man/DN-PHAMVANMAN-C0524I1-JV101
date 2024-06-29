@@ -8,7 +8,7 @@
 <script>
     class SwitchButton {
         constructor(electricLamp) {
-            this.connect = electricLamp;
+            this.lamp = electricLamp;
             this.status = false;
         }
 
@@ -17,13 +17,17 @@
         }
 
         switchOn() {
-            this.status = true;
-            this.connect.status = this.status;
+            if (!(this.status)) {
+                this.status = true;
+            }
+            this.lamp.status = this.status;
         }
 
         switchOff() {
-            this.status = false;
-            this.connect.status = this.status;
+            if (this.status){
+                this.status = false;
+            }
+            this.lamp.status = this.status;
         }
     }
 
