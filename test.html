@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Radial Gradient Example</title>
 </head>
 <body>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #000000;"></canvas>
 <script>
-    function hurdleRace(k, height) {
-        let max = height[0];
-        for (let i = 0; i < height.length; i++) {
-            if (max < height[i]) {
-                max = height[i]
-            }
-        }
-        return max === k ? 0 : max - k;
-    }
+    // Your JavaScript code here
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
 
-    console.log(hurdleRace(5, [2, 5, 4, 5, 2]));
+    // Create gradient
+    var grd = ctx.createRadialGradient(75, 50, 5, 75, 50, 100);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
 </script>
 </body>
 </html>

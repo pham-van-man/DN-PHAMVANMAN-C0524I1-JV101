@@ -4,6 +4,10 @@ canvas {
 
 #gameplay {
     display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 #start {
@@ -23,6 +27,7 @@ canvas {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
 }
 
 #themeGame {
@@ -35,20 +40,20 @@ canvas {
 #bgr {
     width: 100vw;
     height: 100vh;
-    background-image: url("pngtree-red-brick-wall-real-shot-red-black-regular-old-wall-real-image_995498.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 #gameOver {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
 }
 
 #reStart {
+    position: absolute;
+    top: 50%;
+    left: 40%;
     border-radius: 50px;
     font-size: 150px;
     background-color: #7DEB52;
@@ -63,6 +68,14 @@ canvas {
 #text {
     font-size: 100px;
 }
-#scores{
+
+#scores {
     font-size: 100px;
+}
+
+body {
+    background-image: url("Angry-BIrds-Toons-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

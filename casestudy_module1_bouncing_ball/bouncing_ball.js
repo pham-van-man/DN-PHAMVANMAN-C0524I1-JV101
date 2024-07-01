@@ -1,4 +1,4 @@
-let canvas = document.getElementById('themeGame')
+let canvas = document.getElementById('themeGame');
 let context = canvas.getContext('2d');
 
 class Ball {
@@ -30,22 +30,24 @@ class Paddle {
 let paddle = new Paddle(256, 20, 512, canvas.height - 20, 20);
 
 class Brick {
-    constructor(offsetx, offsety, margin, width, height) {
-        this.offsetx = offsetx;
-        this.offsety = offsety;
+    constructor(offSetX, offSetY, margin, width, height) {
+        this.offSetX = offSetX;
+        this.offSetY = offSetY;
         this.margin = margin;
         this.width = width;
         this.height = height;
+        this.img = new Image();
+        this.img.src = '891911be0eed100d641f75906573831b.png';
     }
 }
 
-let brick = new Brick(25, 25, 25, 100.5, 10);
+let brick = new Brick(25, 25, 25, 58.68, 58.68);
 let brickList = [];
-for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 10; j++) {
+for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < 15; j++) {
         brickList.push({
-            x: brick.offsetx + j * (brick.width + brick.margin),
-            y: brick.offsety + i * (brick.height + brick.margin),
+            x: brick.offSetX + j * (brick.width + brick.margin),
+            y: brick.offSetY + i * (brick.height + brick.margin),
             isBroken: false
         })
     }
@@ -74,7 +76,9 @@ function getRandomNumber() {
 }
 
 function drawBall() {
+    context.beginPath();
     context.drawImage(ball.img, ball.x - ball.radius, ball.y - ball.radius, ball.radius * 2, ball.radius * 2);
+    context.closePath();
 }
 
 function drawPaddle() {
@@ -89,9 +93,7 @@ function drawBricks() {
     brickList.forEach(function (br) {
         if (!br.isBroken) {
             context.beginPath();
-            context.rect(br.x, br.y, brick.width, brick.height);
-            context.fillStyle = '#DE3E55';
-            context.fill();
+            context.drawImage(brick.img, br.x, br.y, brick.width, brick.height)
             context.closePath();
         }
     });
@@ -196,7 +198,6 @@ function start() {
     document.getElementById('gameplay').style.display = 'block';
     document.getElementById('gameOver').style.display = 'none';
     document.getElementById('buttonStart').style.display = 'none';
-    resetGame();
     moveBall();
 }
 

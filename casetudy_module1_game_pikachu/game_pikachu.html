@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<button id="restartBtn">Restart Game</button>
+<canvas id="gameCanvas" width="400" height="400"></canvas>
+<script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const tileSize = 40;
+    const rows = 10;
+    const cols = 10;
+
+    let board = [];
+    for (let i = 0; i < rows; i++) {
+        board[i] = [];
+        for (let j = 0; j < cols; j++) {
+            board[i][j] = Math.floor(Math.random() * 5);
+        }
+    }
+
+    function drawBoard() {
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                ctx.fillStyle = getColor(board[i][j]);
+                ctx.fillRect(j * tileSize, i * tileSize, tileSize, tileSize);
+                ctx.strokeRect(j * tileSize, i * tileSize, tileSize, tileSize);
+            }
+        }
+    }
+
+    function getColor(value) {
+        switch (value) {
+            case 0:
+                return 'red';
+            case 1:
+                return 'green';
+            case 2:
+                return 'blue';
+            case 3:
+                return 'yellow';
+            case 4:
+                return 'purple';
+            default:
+                return 'black';
+        }
+    }
+
+    drawBoard();
+    let firstSelection = null;
+
+    canvas.addEventListener('click', function (event) {
+        const x = event.offsetX;
+        const y = event.offsetY;
+        const row = Math.floor(y / tileSize);
+        const col = Math.floor(x / tileSize);
+        if (firstSelection) {
+            if (canConnect(firstSelection.row, firstSelection.col, row, col)) {
+                board[firstSelection.row][firstSelection.col] = -1;
+                board[row][col] = -1;
+                drawBoard();
+            }
+            firstSelection = null;
+        } else {
+            firstSelection = {row, col};
+        }
+    });
+
+    function canConnect(row1, col1, row2, col2) {
+        if (board[row1][col1] !== board[row2][col2]) return false;
+        if (row1 === row2 && col1 === col2) return false;
+
+        return checkDirectConnection(row1, col1, row2, col2)
+            || checkLShapeConnection(row1, col1, row2, col2)
+            || checkZShapeConnection(row1, col1, row2, col2);
+    }
+
+    function checkDirectConnection(row1, col1, row2, col2) {
+        if (row1 === row2) {
+            const minCol = Math.min(col1, col2);
+            const maxCol = Math.max(col1, col2);
+            for (let col = minCol + 1; col < maxCol; col++) {
+                if (board[row1][col] !== -1) return false;
+            }
+            return true;
+        }
+
+        if (col1 === col2) {
+            const minRow = Math.min(row1, row2);
+            const maxRow = Math.max(row1, row2);
+            for (let row = minRow + 1; row < maxRow; row++) {
+                if (board[row][col1] !== -1) return false;
+            }
+            return true;
+        }
+
+        return false;
+    }
+
+    function checkLShapeConnection(row1, col1, row2, col2) {
+        return (checkDirectConnection(row1, col1, row1, col2) && checkDirectConnection(row1, col2, row2, col2))
+            || (checkDirectConnection(row1, col1, row2, col1) && checkDirectConnection(row2, col1, row2, col2));
+    }
+
+    function checkZShapeConnection(row1, col1, row2, col2) {
+        for (let i = 0; i < rows; i++) {
+            if (checkDirectConnection(row1, col1, i, col1)
+                && checkDirectConnection(i, col1, i, col2)
+                && checkDirectConnection(i, col2, row2, col2)) {
+                return true;
+            }
+        }
+        for (let j = 0; j < cols; j++) {
+            if (checkDirectConnection(row1, col1, row1, j)
+                && checkDirectConnection(row1, j, row2, j)
+                && checkDirectConnection(row2, j, row2, col2)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    document.getElementById('restartBtn').addEventListener('click', () => {
+        board = [];
+        for (let i = 0; i < rows; i++) {
+            board[i] = [];
+            for (let j = 0; j < cols; j++) {
+                board[i][j] = Math.floor(Math.random() * 5);
+            }
+        }
+        drawBoard();
+    });
+
+</script>
+</body>
+</html>
